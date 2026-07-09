@@ -84,43 +84,14 @@ const PLAY_URL =
       </div>
     </div>
 
-    <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-      <picture class="block">
-        <source
-          media="(min-width: 1024px)"
-          srcset="/images/JkSFlhCUVXpF8koMaeKi3RdM7r8.png"
-        />
-        <img
-          src="/images/cvEuqymIjiPwYQQePaS3EjhCKk.png"
-          alt="Flotilla web app screenshot showing the general channel chat view"
-          class="relative z-10 w-full rounded-xl border border-border shadow-2xl"
-          width="1200"
-          height="800"
-          loading="eager"
-        />
-      </picture>
-
+    <div class="mx-auto w-full max-w-xl lg:max-w-none">
       <img
-        src="/images/Nx6uS8Wg0VAFS970dpdsxjvkaM.png"
-        alt="Flotilla web app dark Home view with Threads tab and quick-link grid"
-        class="hero-overlay absolute z-20 hidden lg:block"
-        width="900"
-        height="600"
+        src="/images/screenshot.png"
+        alt="Flotilla web app showing the Voice Chat room of a community space, with the room list alongside a chat conversation"
+        class="w-full rounded-xl border border-border shadow-2xl"
+        width="1280"
+        height="950"
         loading="eager"
-      />
-
-      <div
-        class="hero-vignette pointer-events-none absolute inset-0 z-30 hidden lg:block"
-        aria-hidden="true"
-      ></div>
-
-      <img
-        src="/images/ZecxRVIbhYo8hTEN5rFvNbO5JY.png"
-        alt="Flotilla mobile screenshot, dark theme, relay home"
-        class="mt-6 w-full rounded-xl border border-border shadow-xl sm:hidden"
-        width="600"
-        height="900"
-        loading="lazy"
       />
     </div>
   </div>
@@ -137,22 +108,4 @@ const PLAY_URL =
       radial-gradient(40% 40% at 50% 90%, rgba(113, 97, 255, 0.1), transparent 70%);
   }
 
-  .hero-overlay {
-    width: 70%;
-    right: -2%;
-    bottom: -8%;
-    border-radius: 0.75rem;
-    border: 1px solid var(--color-border);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-  }
-
-  .hero-vignette {
-    background: linear-gradient(
-      180deg,
-      transparent 60%,
-      rgba(17, 17, 17, 0.6) 90%,
-      var(--color-bg) 100%
-    );
-    border-radius: 0.75rem;
-  }
 </style>
