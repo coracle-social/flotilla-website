@@ -1,0 +1,158 @@
+---
+import Button from '../Button.astro';
+
+const APP_URL = 'https://app.flotilla.social';
+const DEMO_URL = 'https://cal.com/coracle.social';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/flotilla-chat/id6741344107';
+const PLAY_URL =
+  'https://play.google.com/store/apps/details?id=social.flotilla&pcampaignid=web_share';
+---
+
+<section class="hero-section relative overflow-hidden">
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24 lg:grid-cols-2 lg:gap-10">
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-black tracking-tight sm:text-6xl md:text-7xl">
+        Your{' '}
+        <span class="bg-gradient-to-b from-primary-soft to-primary bg-clip-text text-transparent">
+          Community
+        </span>
+        ,<br />
+        Your Rules.
+      </h1>
+
+      <p class="mx-auto mt-6 max-w-xl text-base text-text-muted sm:text-lg lg:mx-0">
+        <span class="hidden sm:inline">
+          Experience a new way to connect with your people online. Join an existing community
+          space or launch your very own branded platform tailored to your audience.
+        </span>
+        <span class="sm:hidden">
+          Experience a feature-rich nostr client that gives you all the control. Browse your
+          favorite relays or launch your very own branded platform tailored to your audience.
+        </span>
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+        <a
+          href={APP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Use in your Browser"
+        >
+          <img
+            src="/images/Y5RG4WARG22im0gxdN5hBidDRk.png"
+            alt="Use in your Browser"
+            class="h-12 w-auto"
+            width="180"
+            height="60"
+          />
+        </a>
+        <a
+          href={APP_STORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download on the App Store"
+        >
+          <img
+            src="/images/f4TiV4LJ1AQ4XTQejg0vipwNBw.png"
+            alt="Download on the App Store"
+            class="h-12 w-auto"
+            width="180"
+            height="60"
+          />
+        </a>
+        <a
+          href={PLAY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Get it on Google Play"
+        >
+          <img
+            src="/images/4plsOpupRU1vo0R8NzZHM5WvgA.png"
+            alt="Get it on Google Play"
+            class="h-12 w-auto"
+            width="180"
+            height="60"
+          />
+        </a>
+      </div>
+
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+        <Button href={DEMO_URL}>Book a Demo</Button>
+        <Button href="/articles" variant="secondary">Knowledge Base</Button>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+      <picture class="block">
+        <source
+          media="(min-width: 1024px)"
+          srcset="/images/JkSFlhCUVXpF8koMaeKi3RdM7r8.png"
+        />
+        <img
+          src="/images/cvEuqymIjiPwYQQePaS3EjhCKk.png"
+          alt="Flotilla web app screenshot showing the general channel chat view"
+          class="relative z-10 w-full rounded-xl border border-border shadow-2xl"
+          width="1200"
+          height="800"
+          loading="eager"
+        />
+      </picture>
+
+      <img
+        src="/images/Nx6uS8Wg0VAFS970dpdsxjvkaM.png"
+        alt="Flotilla web app dark Home view with Threads tab and quick-link grid"
+        class="hero-overlay absolute z-20 hidden lg:block"
+        width="900"
+        height="600"
+        loading="eager"
+      />
+
+      <div
+        class="hero-vignette pointer-events-none absolute inset-0 z-30 hidden lg:block"
+        aria-hidden="true"
+      ></div>
+
+      <img
+        src="/images/ZecxRVIbhYo8hTEN5rFvNbO5JY.png"
+        alt="Flotilla mobile screenshot, dark theme, relay home"
+        class="mt-6 w-full rounded-xl border border-border shadow-xl sm:hidden"
+        width="600"
+        height="900"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(60% 50% at 20% 10%, rgba(113, 97, 255, 0.18), transparent 70%),
+      radial-gradient(50% 40% at 90% 20%, rgba(113, 97, 255, 0.12), transparent 70%),
+      radial-gradient(40% 40% at 50% 90%, rgba(113, 97, 255, 0.1), transparent 70%);
+  }
+
+  .hero-overlay {
+    width: 70%;
+    right: -2%;
+    bottom: -8%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-vignette {
+    background: linear-gradient(
+      180deg,
+      transparent 60%,
+      rgba(17, 17, 17, 0.6) 90%,
+      var(--color-bg) 100%
+    );
+    border-radius: 0.75rem;
+  }
+</style>

@@ -1,0 +1,55 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+
+  // Build neighbour-aware navigation. Prefer prev/next within the same
+  // category — featured (no category) is its own group.
+  const groups = new Map<string, typeof articles>();
+  for (const a of articles) {
+    const key = a.data.category ?? '__featured__';
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(a);
+  }
+  for (const list of groups.values()) {
+    list.sort((a, b) => a.data.order - b.data.order);
+  }
+
+  return articles.map((article) => {
+    const groupKey = article.data.category ?? '__featured__';
+    const group = groups.get(groupKey)!;
+    const idx = group.findIndex((a) => a.id === article.id);
+    const prev = idx > 0 ? group[idx - 1] : null;
+    const next = idx >= 0 && idx < group.length - 1 ? group[idx + 1] : null;
+
+    return {
+      params: { slug: article.id },
+      props: {
+        article,
+        prev: prev ? { slug: prev.id, title: prev.data.title } : null,
+        next: next ? { slug: next.id, title: next.data.title } : null,
+      },
+    };
+  });
+}
+
+const { article, prev, next } = Astro.props;
+const { Content } = await render(article);
+
+// Estimated read time, rounded up at ~200wpm.
+const wordCount = (article.body ?? '').trim().split(/\s+/).filter(Boolean).length;
+const readTime = Math.max(1, Math.ceil(wordCount / 200));
+---
+
+<ArticleLayout
+  title={article.data.title}
+  description={article.data.description}
+  category={article.data.category}
+  readTime={readTime}
+  prev={prev}
+  next={next}
+>
+  <Content />
+</ArticleLayout>

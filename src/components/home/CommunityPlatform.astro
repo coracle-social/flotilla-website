@@ -1,0 +1,111 @@
+---
+import Button from '../Button.astro';
+
+const DEMO_URL = 'https://cal.com/coracle.social';
+
+const cards = [
+  {
+    title: 'Personalize',
+    body: 'Make your mission pop with a white-labeled instance, complete with full content curation.',
+    icon: 'sliders',
+  },
+  {
+    title: 'Organize',
+    body: 'Use your own relays and turn on only the features you want, including events, threads, chat, or zaps for monetization.',
+    icon: 'cards',
+  },
+  {
+    title: 'Connect',
+    body: 'Engage with group members, organize events, or share exclusive content.',
+    icon: 'nodes',
+  },
+] as const;
+---
+
+<section class="relative py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <div class="text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-text-muted">
+        Create your own
+      </p>
+      <h2 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
+        Community Platform
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-base text-text-muted sm:text-lg">
+        Cultivate your community with your very own personalized social media platform.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-6 md:grid-cols-3">
+      {cards.map((card) => (
+        <div class="rounded-2xl border border-border-soft bg-surface/60 p-7 backdrop-blur-sm">
+          <div class="text-primary">
+            {card.icon === 'sliders' && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="8" y1="14" x2="40" y2="14" />
+                <line x1="8" y1="34" x2="40" y2="34" />
+                <circle cx="18" cy="14" r="4" fill="var(--color-bg)" />
+                <circle cx="32" cy="34" r="4" fill="var(--color-bg)" />
+              </svg>
+            )}
+            {card.icon === 'cards' && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="6" y="10" width="22" height="28" rx="3" />
+                <rect x="20" y="6" width="22" height="28" rx="3" />
+              </svg>
+            )}
+            {card.icon === 'nodes' && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="24" cy="10" r="4" />
+                <circle cx="10" cy="36" r="4" />
+                <circle cx="38" cy="36" r="4" />
+                <line x1="24" y1="14" x2="12" y2="32" />
+                <line x1="24" y1="14" x2="36" y2="32" />
+                <line x1="14" y1="36" x2="34" y2="36" />
+              </svg>
+            )}
+          </div>
+          <h3 class="mt-6 text-2xl font-black">{card.title}</h3>
+          <p class="mt-3 text-text-muted">{card.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <Button href={DEMO_URL}>Book a Demo</Button>
+    </div>
+  </div>
+</section>

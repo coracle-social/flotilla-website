@@ -1,0 +1,100 @@
+---
+const features = [
+  { label: 'Join Multiple Groups', icon: 'code-editor' },
+  { label: 'Event Calendar', icon: 'calendar' },
+  { label: 'Zaps', icon: 'bolt' },
+  { label: 'Threads', icon: 'album' },
+  { label: 'Chat Rooms', icon: 'list' },
+  { label: 'Web of Trust', icon: 'badge-check' },
+  { label: 'Custom Access Policies', icon: 'users' },
+  { label: 'White-Labeled Instance', icon: 'paintbrush' },
+  { label: 'Private Messages', icon: 'messages' },
+] as const;
+---
+
+<section class="relative py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <div class="text-center">
+      <h2 class="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
+        Nostr,<br />Your Way
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-base text-text-muted sm:text-lg">
+        Customize your online community platform with Flotilla.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+      {features.map((f) => (
+        <div class="flex items-center gap-4 rounded-2xl border border-border bg-surface/40 p-6">
+          <span class="flex-none text-primary">
+            {f.icon === 'code-editor' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M9 10l-2 2 2 2" />
+                <path d="M15 10l2 2-2 2" />
+              </svg>
+            )}
+            {f.icon === 'calendar' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <line x1="8" y1="3" x2="8" y2="7" />
+                <line x1="16" y1="3" x2="16" y2="7" />
+              </svg>
+            )}
+            {f.icon === 'bolt' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 4 14 12 14 11 22 20 10 12 10 13 2" />
+              </svg>
+            )}
+            {f.icon === 'album' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="14" rx="2" />
+                <path d="M3 19h18" />
+                <path d="M5 22h14" />
+              </svg>
+            )}
+            {f.icon === 'list' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="9" y1="6" x2="20" y2="6" />
+                <line x1="9" y1="12" x2="20" y2="12" />
+                <line x1="9" y1="18" x2="20" y2="18" />
+                <circle cx="4.5" cy="6" r="1.5" />
+                <circle cx="4.5" cy="12" r="1.5" />
+                <circle cx="4.5" cy="18" r="1.5" />
+              </svg>
+            )}
+            {f.icon === 'badge-check' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l2.4 2 3.1-.4.4 3.1L20 9l-2 2.4.4 3.1-3.1.4L13 17l-1-3-2.4 2-3.1-.4-.4-3.1L4 11l2-2.4-.4-3.1 3.1-.4L11 4l1-2z" />
+                <polyline points="9 12 11 14 15 10" />
+              </svg>
+            )}
+            {f.icon === 'users' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="9" cy="9" r="3" />
+                <circle cx="17" cy="8" r="2.5" />
+                <path d="M3 19c0-3 3-5 6-5s6 2 6 5" />
+                <path d="M14 19c0-2.2 2-3.5 4-3.5s3 1 3 3" />
+              </svg>
+            )}
+            {f.icon === 'paintbrush' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="14" rx="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <path d="M9 14l3 3 5-5" />
+              </svg>
+            )}
+            {f.icon === 'messages' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 8a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2l-3 3v-3H6a3 3 0 0 1-3-3z" />
+                <path d="M9 19a3 3 0 0 0 3 3h4l3 3v-3h2a3 3 0 0 0 3-3v-3" />
+              </svg>
+            )}
+          </span>
+          <span class="text-lg font-bold leading-tight text-white">{f.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
