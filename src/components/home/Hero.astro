@@ -1,111 +1,74 @@
 ---
 import Button from '../Button.astro';
+import { Icon } from 'astro-icon/components';
 
 const APP_URL = 'https://app.flotilla.social';
-const DEMO_URL = 'https://cal.com/coracle.social';
-const APP_STORE_URL = 'https://apps.apple.com/us/app/flotilla-chat/id6741344107';
-const PLAY_URL =
-  'https://play.google.com/store/apps/details?id=social.flotilla&pcampaignid=web_share';
 ---
 
-<section class="hero-section relative overflow-hidden">
-  <div class="hero-bg" aria-hidden="true"></div>
+<section class="hero relative overflow-hidden">
+  <div class="hero-media" aria-hidden="true">
+    <img
+      src="/images/hero-archipelago.jpg"
+      alt=""
+      width="1344"
+      height="768"
+      fetchpriority="high"
+    />
+    <div class="hero-scrim"></div>
+  </div>
 
-  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pt-12 pb-16 md:px-8 md:pt-20 md:pb-24 lg:grid-cols-2 lg:gap-10">
-    <div class="text-center lg:text-left">
-      <h1 class="text-5xl font-black tracking-tight sm:text-6xl md:text-7xl">
-        Your{' '}
-        <span class="bg-gradient-to-b from-primary-soft to-primary bg-clip-text text-transparent">
-          Community
-        </span>
-        ,<br />
-        Your Rules.
-      </h1>
-
-      <p class="mx-auto mt-6 max-w-xl text-base text-text-muted sm:text-lg lg:mx-0">
-        <span class="hidden sm:inline">
-          Experience a new way to connect with your people online. Join an existing community
-          space or launch your very own branded platform tailored to your audience.
-        </span>
-        <span class="sm:hidden">
-          Experience a feature-rich nostr client that gives you all the control. Browse your
-          favorite relays or launch your very own branded platform tailored to your audience.
-        </span>
+  <div class="relative mx-auto max-w-6xl px-5 pt-24 pb-28 md:px-8 md:pt-32 md:pb-40">
+    <div class="max-w-3xl text-center md:text-left">
+      <p class="inline-flex items-center gap-2 rounded-pill border border-border bg-surface/50 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary-soft backdrop-blur-sm">
+        <Icon name="ph:chats-circle" class="h-4 w-4" /> Communities for free people
       </p>
 
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-        <a
-          href={APP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Use in your Browser"
-        >
-          <img
-            src="/images/Y5RG4WARG22im0gxdN5hBidDRk.png"
-            alt="Use in your Browser"
-            class="h-12 w-auto"
-            width="180"
-            height="60"
-          />
-        </a>
-        <a
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Download on the App Store"
-        >
-          <img
-            src="/images/f4TiV4LJ1AQ4XTQejg0vipwNBw.png"
-            alt="Download on the App Store"
-            class="h-12 w-auto"
-            width="180"
-            height="60"
-          />
-        </a>
-        <a
-          href={PLAY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Get it on Google Play"
-        >
-          <img
-            src="/images/4plsOpupRU1vo0R8NzZHM5WvgA.png"
-            alt="Get it on Google Play"
-            class="h-12 w-auto"
-            width="180"
-            height="60"
-          />
-        </a>
-      </div>
+      <h1 class="mt-6 text-balance text-4xl font-extrabold sm:text-5xl md:text-6xl">
+        Run your community,<br />
+        <span class="bg-gradient-to-r from-primary-soft to-primary bg-clip-text text-transparent">
+          not the other way around.
+        </span>
+      </h1>
 
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-        <Button href={DEMO_URL}>Book a Demo</Button>
-        <Button href="/articles" variant="secondary">Knowledge Base</Button>
-      </div>
-    </div>
+      <p class="mx-auto mt-6 max-w-xl text-base text-text-muted sm:text-lg md:mx-0">
+        Chat, events, moderation, and member tools in one place — without the ads,
+        surveillance, or shutdown risk of the big platforms. The community you build
+        stays yours.
+      </p>
 
-    <div class="mx-auto w-full max-w-xl lg:max-w-none">
-      <img
-        src="/images/screenshot.png"
-        alt="Flotilla web app showing the Voice Chat room of a community space, with the room list alongside a chat conversation"
-        class="w-full rounded-xl border border-border shadow-2xl"
-        width="1280"
-        height="950"
-        loading="eager"
-      />
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+        <Button href={APP_URL}>Open Flotilla</Button>
+        <Button href="/pricing" variant="secondary">Start a community</Button>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .hero-bg {
+  .hero-media {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background:
-      radial-gradient(60% 50% at 20% 10%, rgba(113, 97, 255, 0.18), transparent 70%),
-      radial-gradient(50% 40% at 90% 20%, rgba(113, 97, 255, 0.12), transparent 70%),
-      radial-gradient(40% 40% at 50% 90%, rgba(113, 97, 255, 0.1), transparent 70%);
   }
-
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
+  }
+  /* Dark scrim so the headline stays legible over the illustration.
+     Heavier on the left (where the copy sits) and along the bottom. */
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, var(--color-bg) 0%, rgba(17, 17, 17, 0.85) 32%, rgba(17, 17, 17, 0.35) 70%, rgba(17, 17, 17, 0.55) 100%),
+      linear-gradient(0deg, var(--color-bg) 2%, transparent 40%);
+  }
+  @media (max-width: 767px) {
+    .hero-scrim {
+      background:
+        linear-gradient(0deg, var(--color-bg) 4%, rgba(17, 17, 17, 0.7) 45%, rgba(17, 17, 17, 0.55) 100%);
+    }
+  }
 </style>
