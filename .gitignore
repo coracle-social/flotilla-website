@@ -22,8 +22,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-# scrape source material (local-only reference for the rebuild)
-scrape/node_modules/
-scrape/screenshots/
-scrape/raw/
