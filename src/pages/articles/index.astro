@@ -52,6 +52,21 @@ const sections = [
 
 const featuredArticle = featured[0];
 const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
+
+// Everything the search box matches against, precomputed at build time. The
+// description is included as well as the summary: summarize() deliberately
+// ignores it, so a term that only appears there would otherwise never match.
+function searchText(article: (typeof articles)[number]): string {
+  return [
+    article.data.title,
+    article.data.description ?? '',
+    article.data.category ?? '',
+    article.id,
+    summarize(article),
+  ]
+    .join(' ')
+    .toLowerCase();
+}
 ---
 
 <BaseLayout
@@ -59,7 +74,7 @@ const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
   description="Guides and answers for getting the most out of Flotilla — from joining your first space to running your own community."
 >
   <Container size="default" class="py-16 md:py-24">
-    <header class="mb-12 md:mb-16 max-w-2xl">
+    <header class="mb-8 md:mb-10 max-w-2xl">
       <p class="font-mono text-xs uppercase tracking-[0.2em] text-text-dim mb-4">
         Knowledge Base
       </p>
@@ -72,10 +87,43 @@ const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
       </p>
     </header>
 
+    {/* Revealed by the script below, so it's never a dead input without JS.
+        Sits outside the header so it spans the full container width. */}
+    <div class="mb-10 md:mb-12" data-search-wrap hidden>
+      <label for="article-search" class="sr-only">Search articles</label>
+      <div class="search-field relative">
+        <svg
+          class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-text-dim"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="21" y2="21" />
+        </svg>
+        <input
+          id="article-search"
+          type="search"
+          autocomplete="off"
+          placeholder="Search articles…"
+          class="w-full rounded-pill border border-border bg-surface py-3 pl-12 pr-4 text-text placeholder:text-text-dim"
+          data-search-input
+        />
+      </div>
+      <p class="sr-only" role="status" aria-live="polite" data-status></p>
+    </div>
+
     {featuredArticle && (
       <a
         href={`/articles/${featuredArticle.id}`}
         class="group relative block rounded-xl border border-border bg-surface p-7 md:p-10 mb-16 md:mb-20 overflow-hidden hover:border-primary/50 transition-colors"
+        data-featured
+        data-search={searchText(featuredArticle)}
       >
         <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
         <div class="relative flex flex-col md:flex-row md:items-center md:gap-10">
@@ -101,10 +149,10 @@ const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
     )}
 
     {sections.map((section) => (
-      <section class="mb-14 md:mb-20 last:mb-0">
+      <section class="mb-14 md:mb-20 last:mb-0" data-section>
         <div class="flex items-end justify-between mb-6 md:mb-8 border-b border-border-soft pb-3">
           <h2 class="text-2xl md:text-3xl font-black text-text">{section.title}</h2>
-          <span class="font-mono text-xs uppercase tracking-[0.2em] text-text-dim">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-text-dim" data-count>
             {section.items.length} {section.items.length === 1 ? 'article' : 'articles'}
           </span>
         </div>
@@ -113,6 +161,8 @@ const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
             <a
               href={`/articles/${article.id}`}
               class="group flex flex-col rounded-lg border border-border-soft bg-surface/40 p-6 hover:border-border hover:bg-surface transition-colors"
+              data-card
+              data-search={searchText(article)}
             >
               <h3 class="text-lg font-black text-text leading-snug group-hover:text-primary-soft transition-colors">
                 {article.data.title}
@@ -129,8 +179,68 @@ const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
         </div>
       </section>
     ))}
+
+    <p class="py-16 text-center text-text-muted" data-empty hidden>
+      No articles match <strong class="text-text" data-empty-term></strong>. Try a different term.
+    </p>
   </Container>
 </BaseLayout>
+
+<script>
+  const wrap = document.querySelector<HTMLElement>('[data-search-wrap]');
+  const input = document.querySelector<HTMLInputElement>('[data-search-input]');
+  const status = document.querySelector<HTMLElement>('[data-status]');
+  const empty = document.querySelector<HTMLElement>('[data-empty]');
+  const emptyTerm = document.querySelector<HTMLElement>('[data-empty-term]');
+  const featured = document.querySelector<HTMLElement>('[data-featured]');
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-section]'));
+
+  if (wrap && input && status && empty && emptyTerm) {
+    wrap.hidden = false;
+
+    const plural = (n: number) => `${n} ${n === 1 ? 'article' : 'articles'}`;
+
+    const apply = (raw: string) => {
+      const term = raw.trim().toLowerCase();
+      const matches = (el: HTMLElement) => !term || (el.dataset.search ?? '').includes(term);
+      let total = 0;
+
+      if (featured) {
+        const hit = matches(featured);
+        featured.hidden = !hit;
+        if (hit) total += 1;
+      }
+
+      for (const section of sections) {
+        let shown = 0;
+        for (const card of section.querySelectorAll<HTMLElement>('[data-card]')) {
+          const hit = matches(card);
+          card.hidden = !hit;
+          if (hit) shown += 1;
+        }
+        section.hidden = shown === 0;
+        const count = section.querySelector<HTMLElement>('[data-count]');
+        if (count) count.textContent = plural(shown);
+        total += shown;
+      }
+
+      empty.hidden = total > 0;
+      emptyTerm.textContent = `“${raw.trim()}”`;
+      status.textContent = term ? `${plural(total)} matching “${raw.trim()}”` : '';
+    };
+
+    input.addEventListener('input', () => apply(input.value));
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && input.value) {
+        input.value = '';
+        apply('');
+      }
+    });
+
+    // Browsers restore input values on back/forward; re-filter so the DOM agrees.
+    if (input.value) apply(input.value);
+  }
+</script>
 
 <style>
   .line-clamp-3 {
@@ -138,5 +248,24 @@ const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  /* The cards carry `display: flex` from a utility class, which outranks the
+     UA stylesheet's `[hidden] { display: none }`. Without this they'd stay
+     visible when the filter hides them. */
+  [hidden] {
+    display: none !important;
+  }
+
+  .search-field input:focus-visible {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(113, 97, 255, 0.25);
+  }
+
+  /* Safari renders a native clear button; we have Escape and it clashes. */
+  .search-field input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
   }
 </style>

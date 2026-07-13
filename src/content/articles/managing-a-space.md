@@ -2,8 +2,8 @@
 title: "Managing a Space"
 slug: managing-a-space
 source: https://flotilla.social/articles/managing-a-space
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
-order: 8
+description: "Space settings, membership, roles, bans, reports, and room permissions for community organizers."
+order: 33
 category: advanced
 ---
 
@@ -21,7 +21,7 @@ If your space relay supports Nostr's [relay management API](https://github.com/n
 
 ### Space Membership
 
-To view your space's members, open up the main space menu and click "View Members". This will show you a list of people who are advertised by the host relay as having access to your space.
+To view your space's members, open up the main space menu and click "View Members". This will show you a list of people who are advertised by the host relay as having access to your space. For how people get onto this list in the first place — invite links, adding members by pubkey, and open-vs-private access policy — see [Controlling Who Can Join Your Space](/articles/controlling-space-access).
 
 ![](/images/1FZbjuqxKjbk8fhv5l2exQzUmU.png)
 
@@ -70,17 +70,8 @@ Rooms have certain permissions that control how non-members can interact with it
 - **Hidden** rooms are entirely hidden from non-members.
 - **Closed** rooms are invite-only — there's no way to request access to a closed room.
 
-In the future, Flotilla will include **role-based access control**, which will allow you to assign roles to users in order to delegate moderation, or grant access in bulk.
+### Space Roles
 
-## Images
+Admins can create custom, color-coded roles to help organize a space's membership. From the space's member directory or member management screens, create a role with a label, a description, and a color, then assign it to whichever members it applies to. Assigned roles show up next to a member's name in the member directory, so anyone browsing the directory can see at a glance who holds which role.
 
-| local | original | alt | usage |
-|---|---|---|---|
-| /images/aEJkBRBQUhOB9Vz6HgSwj7ebv8c.png | https://framerusercontent.com/images/aEJkBRBQUhOB9Vz6HgSwj7ebv8c.png |  | inline body image |
-| /images/1FZbjuqxKjbk8fhv5l2exQzUmU.png | https://framerusercontent.com/images/1FZbjuqxKjbk8fhv5l2exQzUmU.png |  | inline body image |
-| /images/WLcL6LghMSptUZn6smnbIbSWQ.png | https://framerusercontent.com/images/WLcL6LghMSptUZn6smnbIbSWQ.png |  | inline body image |
-| /images/iYbmC9rlJ9YV9HmYZuhjWCgeldI.png | https://framerusercontent.com/images/iYbmC9rlJ9YV9HmYZuhjWCgeldI.png |  | inline body image |
-| /images/s5HJG9pV1pOHI7R2u5EJfJwTmw.png | https://framerusercontent.com/images/s5HJG9pV1pOHI7R2u5EJfJwTmw.png |  | inline body image |
-| /images/nxzgitzyUAmoirMJVQnkKlEXQ.png | https://framerusercontent.com/images/nxzgitzyUAmoirMJVQnkKlEXQ.png |  | inline body image |
-| /images/egs0jTA1Ys001qjfgNt7DuEsx3Y.png | https://framerusercontent.com/images/egs0jTA1Ys001qjfgNt7DuEsx3Y.png |  | inline body image |
-| /images/e1MOHQl9pW03d3peS2hMQamPtNM.png | https://framerusercontent.com/images/e1MOHQl9pW03d3peS2hMQamPtNM.png |  | inline body image |
+It's worth being precise about what roles are and aren't. They're organizational and display labels — a way to mark out moderators, event hosts, or any other group you want to identify — not a fine-grained permission system. Assigning someone a role does not by itself grant them the ability to moderate or administer the space; that's governed separately, by the underlying relay (owners and the admins the relay recognizes). If you want someone to actually have moderation powers — banning members, editing room permissions, and the like — that's a relay-level admin grant, independent of any role label you've given them.

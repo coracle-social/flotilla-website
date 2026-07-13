@@ -9,6 +9,9 @@ const BLOG_URL = 'https://hodlbod.npub.pro/';
 
 const year = new Date().getFullYear();
 
+const externalAttrs = (href: string) =>
+  /^https?:/.test(href) ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+
 const colA = [
   { label: 'Login', href: APP_URL },
   { label: 'Book a Demo', href: DEMO_URL },
@@ -32,7 +35,11 @@ const colB = [
         <ul class="space-y-3">
           {colA.map((l) => (
             <li>
-              <a href={l.href} class="text-text-muted hover:text-text transition-colors">
+              <a
+                href={l.href}
+                class="text-text-muted hover:text-text transition-colors"
+                {...externalAttrs(l.href)}
+              >
                 {l.label}
               </a>
             </li>
@@ -41,7 +48,11 @@ const colB = [
         <ul class="space-y-3">
           {colB.map((l) => (
             <li>
-              <a href={l.href} class="text-text-muted hover:text-text transition-colors">
+              <a
+                href={l.href}
+                class="text-text-muted hover:text-text transition-colors"
+                {...externalAttrs(l.href)}
+              >
                 {l.label}
               </a>
             </li>

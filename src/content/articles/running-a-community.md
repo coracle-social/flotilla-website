@@ -2,8 +2,8 @@
 title: "Running a Community"
 slug: running-a-community
 source: https://flotilla.social/articles/running-a-community
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
-order: 9
+description: "Practical guidance on purpose, moderation, and culture for people responsible for a community."
+order: 35
 category: advanced
 ---
 

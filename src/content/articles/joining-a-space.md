@@ -2,8 +2,8 @@
 title: "Joining a Space"
 slug: joining-a-space
 source: https://flotilla.social/articles/joining-a-space
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
-order: 3
+description: "Join a community with an invite link or by browsing the directory of public spaces."
+order: 11
 category: basics
 ---
 
@@ -38,14 +38,3 @@ It's also possible to browse spaces by visiting the discover page. If you're fol
 To join a space, simply click on the item and follow the prompts. It may be that the space is invite-only, in which case you may need to contact the moderator in order to get an invite code.
 
 ![](/images/LtDFmUBZ1oh4lx9kYp0f9lQgDo.png)
-
-## Images
-
-| local | original | alt | usage |
-|---|---|---|---|
-| /images/I2LtHI0p1SLa9ojYgb0d18nm30.png | https://framerusercontent.com/images/I2LtHI0p1SLa9ojYgb0d18nm30.png |  | inline body image |
-| /images/wAcxHMJxFnHhz0eunPiMoEAZyZE.png | https://framerusercontent.com/images/wAcxHMJxFnHhz0eunPiMoEAZyZE.png |  | inline body image |
-| /images/08eQje5giSMGDUtd5uF2Nsh2TbY.png | https://framerusercontent.com/images/08eQje5giSMGDUtd5uF2Nsh2TbY.png |  | inline body image |
-| /images/34F0xVzKxz8oOafl8Oyba0JN1iU.png | https://framerusercontent.com/images/34F0xVzKxz8oOafl8Oyba0JN1iU.png |  | inline body image |
-| /images/b5pmuXiTMtFMkNciSm5SRROnvx8.png | https://framerusercontent.com/images/b5pmuXiTMtFMkNciSm5SRROnvx8.png |  | inline body image |
-| /images/LtDFmUBZ1oh4lx9kYp0f9lQgDo.png | https://framerusercontent.com/images/LtDFmUBZ1oh4lx9kYp0f9lQgDo.png |  | inline body image |

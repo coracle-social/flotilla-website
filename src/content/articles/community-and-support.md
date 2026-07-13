@@ -2,8 +2,8 @@
 title: "Community and Support"
 slug: community-and-support
 source: https://flotilla.social/articles/community-and-support
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
-order: 5
+description: "Where to get help, meet other organizers, and talk to the people building Flotilla."
+order: 22
 category: basics
 ---
 

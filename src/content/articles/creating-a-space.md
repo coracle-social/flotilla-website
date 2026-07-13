@@ -2,8 +2,8 @@
 title: "Creating a Space"
 slug: creating-a-space
 source: https://flotilla.social/articles/creating-a-space
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
-order: 6
+description: "Flotilla doesn't host your community — this explains what a space really is and how to get one, hosted or self-run."
+order: 23
 category: advanced
 ---
 
@@ -34,9 +34,3 @@ If you're ready to get started, please take a look at our [guide](/articles/self
 Down the road, you may want to migrate your relay to another server, relay implementation, or domain name. This is all a pretty manual process right now, but we're working on tools to make it easier!
 
 If you've set up a relay and need some help, join our [space](https://app.flotilla.social/join?r=meta.spaces.coracle.social&c=LE7S3IA2) and we'll be happy to help you out.
-
-## Images
-
-| local | original | alt | usage |
-|---|---|---|---|
-| /images/YpWKXWBpYZjOTmWOwNg6gtgQlA.png | https://framerusercontent.com/images/YpWKXWBpYZjOTmWOwNg6gtgQlA.png |  | inline body image |

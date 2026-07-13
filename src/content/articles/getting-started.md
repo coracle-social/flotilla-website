@@ -2,7 +2,7 @@
 title: "Getting Started"
 slug: getting-started
 source: https://flotilla.social/articles/getting-started
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
+description: "Create an account or log in with an existing Nostr profile, and take your first steps in the Flotilla app."
 order: 2
 category: basics
 ---
@@ -32,13 +32,3 @@ Finally, you'll be given the chance to download your key, optionally encrypted u
 Once you've downloaded your key and put it somewhere safe, you're ready to connect with your community!
 
 ![](/images/WP4icdnIyNEdKEpcxr8MlGPJ44A.png)
-
-## Images
-
-| local | original | alt | usage |
-|---|---|---|---|
-| /images/EFY4bw3U7nueQ7Hkznk0FzFqa3A.png | https://framerusercontent.com/images/EFY4bw3U7nueQ7Hkznk0FzFqa3A.png |  | inline body image |
-| /images/hppIr2OPt7E32tfGRXlXs3vqHvI.png | https://framerusercontent.com/images/hppIr2OPt7E32tfGRXlXs3vqHvI.png |  | inline body image |
-| /images/3Opa0Lmnb4pL0JZUSLuP6eAT4.png | https://framerusercontent.com/images/3Opa0Lmnb4pL0JZUSLuP6eAT4.png |  | inline body image |
-| /images/19DWPG9XmU4u0UU2htz1xxvboGo.png | https://framerusercontent.com/images/19DWPG9XmU4u0UU2htz1xxvboGo.png |  | inline body image |
-| /images/WP4icdnIyNEdKEpcxr8MlGPJ44A.png | https://framerusercontent.com/images/WP4icdnIyNEdKEpcxr8MlGPJ44A.png |  | inline body image |

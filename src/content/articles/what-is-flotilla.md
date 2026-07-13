@@ -2,7 +2,7 @@
 title: "What is Flotilla?"
 slug: what-is-flotilla
 source: https://flotilla.social/articles/what-is-flotilla
-description: "Experience a new way to connect with your community online. Join an existing community space or launch your very own branded platform tailored to your audience. The decentralized Discord alternative built on the Nostr protocol."
+description: "Flotilla is software for sovereign communities — a Nostr-based alternative to Discord that nobody can take away from you."
 order: 1
 ---
 
