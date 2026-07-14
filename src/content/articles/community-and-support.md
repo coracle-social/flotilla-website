@@ -11,8 +11,8 @@ category: basics
 
 *Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
 
-We're glad you're interested in Flotilla! We invite you to join us in our [community chat](https://app.flotilla.social/join?r=meta.spaces.coracle.social&c=LE7S3IA2), whether you're looking for help, or just want to talk to other community organizers like yourself.
+We're glad you're here. Whether you're looking for help or just want to talk with other community organizers, come join us in our [community chat](https://app.flotilla.social/join?r=meta.spaces.coracle.social&c=LE7S3IA2).
 
-Running a community is a big job, so we wanted to go beyond just making software and throwing it over the fence. Instead, we want to give you the resources you need to help your community flourish! In addition to chatting with other community organizers, you can also read our [community organizers guide](/articles/running-a-community) which includes some tips for nurturing a healthy group.
+Running a community is a big job, so we didn't want to just build the software and throw it over the fence. We'd rather give you the resources to help your community flourish. Along with chatting to other organizers, you can read our [community organizers guide](/articles/running-a-community) for tips on nurturing a healthy group.
 
-Finally, if you notice any bugs, want a look at the source code, or want to run your own instance, please take a look at the [repository](https://github.com/coracle-social/flotilla). If you'd like to host your own community relay, the [zooid](https://github.com/coracle-social/zooid) project is a good place to start.
+Finally, if you spot a bug, want to read the source code, or want to run your own instance, take a look at the [repository](https://github.com/coracle-social/flotilla). And if you'd like to host your own community relay, the [zooid](https://github.com/coracle-social/zooid) project is a good place to start.

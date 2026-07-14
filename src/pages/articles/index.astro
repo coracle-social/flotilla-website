@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Container from '../../components/Container.astro';
+import { CLUSTERS } from '../../lib/clusters';
 
 const articles = await getCollection('articles');
 const bySlug = new Map(articles.map((a) => [a.id, a] as const));
@@ -41,82 +42,9 @@ function searchText(article: (typeof articles)[number]): string {
     .toLowerCase();
 }
 
-// Organize the knowledge base by topic cluster, with the two pillar guides
-// featured up top. Keep this list in sync when adding articles — anything not
-// placed here falls into a "More" catch-all so it never disappears.
-const CLUSTERS = [
-  {
-    id: 'start',
-    title: 'Start here',
-    featured: true,
-    slugs: ['how-to-run-an-online-community', 'what-is-nostr'],
-  },
-  {
-    id: 'getting-started',
-    title: 'Getting started',
-    slugs: [
-      'what-is-flotilla',
-      'getting-started',
-      'installing-flotilla',
-      'logging-in-to-flotilla',
-      'setting-up-your-profile',
-      'joining-a-space',
-    ],
-  },
-  {
-    id: 'nostr',
-    title: 'Understanding Nostr',
-    slugs: [
-      'nostr-terms-explained',
-      'understanding-your-nostr-identity',
-      'backing-up-and-recovering-your-account',
-    ],
-  },
-  {
-    id: 'using',
-    title: 'Using Flotilla',
-    slugs: [
-      'spaces-and-rooms-explained',
-      'chatting-in-a-space',
-      'direct-messages',
-      'using-voice-and-video-calls',
-      'finding-messages-and-recent-activity',
-      'notifications-and-muting',
-      'featured-content-and-library',
-      'zaps-and-wallet',
-      'customizing-how-flotilla-looks',
-    ],
-  },
-  {
-    id: 'running',
-    title: 'Running a community',
-    slugs: ['running-a-community', 'creating-a-space', 'managing-a-space', 'controlling-space-access'],
-  },
-  {
-    id: 'hosting',
-    title: 'Hosting your space',
-    slugs: [
-      'coracle-hosting',
-      'managing-your-hosted-relay',
-      'hosting-billing',
-      'custom-domain',
-      'self-hosting-a-space',
-      'setting-up-media-storage-on-your-relay',
-      'enabling-voice-and-video-calls-on-your-relay',
-      'backing-up-and-upgrading-a-relay',
-    ],
-  },
-  {
-    id: 'privacy',
-    title: 'Privacy, cost & account',
-    slugs: ['is-flotilla-private', 'privacy-settings', 'deleting-your-account', 'is-flotilla-free'],
-  },
-  {
-    id: 'help',
-    title: 'Help & community',
-    slugs: ['community-and-support'],
-  },
-];
+// Cluster definitions live in src/lib/clusters.ts — shared with the article
+// layout so the index section, the article badge, and the back-link pillar
+// all stay in sync.
 
 const placed = new Set(CLUSTERS.flatMap((c) => c.slugs));
 const sections = CLUSTERS.map((c) => ({

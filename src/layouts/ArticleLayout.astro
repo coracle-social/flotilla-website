@@ -5,7 +5,7 @@ import Container from '../components/Container.astro';
 interface Props {
   title: string;
   description?: string;
-  category?: 'basics' | 'advanced';
+  cluster?: string | null;
   readTime?: number;
   prev?: { slug: string; title: string } | null;
   next?: { slug: string; title: string } | null;
@@ -15,15 +15,12 @@ interface Props {
 const {
   title,
   description,
-  category,
+  cluster,
   readTime,
   prev = null,
   next = null,
   ogImage,
 } = Astro.props;
-
-const categoryLabel =
-  category === 'basics' ? 'Basics' : category === 'advanced' ? 'Advanced' : null;
 ---
 
 <BaseLayout title={title} description={description} ogImage={ogImage}>
@@ -39,11 +36,11 @@ const categoryLabel =
       <h1 class="mt-5 text-4xl md:text-5xl font-black text-text leading-[1.1]">
         {title}
       </h1>
-      {(categoryLabel || readTime) && (
+      {(cluster || readTime) && (
         <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-text-dim">
-          {categoryLabel && (
+          {cluster && (
             <span class="inline-flex items-center rounded-pill border border-border bg-surface px-3 py-1 font-mono text-xs uppercase tracking-[0.15em] text-text-muted">
-              {categoryLabel}
+              {cluster}
             </span>
           )}
           {readTime && (

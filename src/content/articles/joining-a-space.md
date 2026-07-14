@@ -9,34 +9,34 @@ category: basics
 
 # Joining a Space
 
-*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
 
-There are two main ways to join a space on Flotilla — by using an invite link, or by browsing to discover existing groups. If you're a community organizer, we encourage you to invite your members using an invite link — the flow is much simpler for everyone involved.
+There are two main ways to join a space on Flotilla: with an invite link, or by browsing to discover existing groups. If you're a community organizer, we recommend inviting your members with a link — the flow is much simpler for everyone.
 
 ### Using an Invite Link
 
-Invite links are designed to be dead simple to use. To create one, open the space's main menu and click "Create Invite". This will create a link pointing to this space. If your space supports it, you'll also be given an invite code which can be used to grant access to other users.
+Invite links are meant to be dead simple. To create one, open the space's main menu and click "Create Invite". Flotilla generates a link pointing to the space. If your space supports it, you'll also get an invite code you can use to grant access to other people.
 
 ![](/images/I2LtHI0p1SLa9ojYgb0d18nm30.png)
 
-This link can be copied and shared, or it can be scanned with your camera. In either case, you'll be brought to Flotilla, given the opportunity to install the app or continue on web, and walked through the onboarding and login process.
+Copy and share the link, or scan it with your camera. Either way, it brings you to Flotilla, offers to install the app or continue on the web, and walks you through onboarding and login.
 
 ![](/images/wAcxHMJxFnHhz0eunPiMoEAZyZE.png)
 
-Once you're in, you'll be asked to confirm whether you wish to join the space. Just click "Join Space", and you're all set!
+Once you're in, you'll be asked to confirm that you want to join the space. Click "Join Space", and you're all set.
 
 ![](/images/08eQje5giSMGDUtd5uF2Nsh2TbY.png)
 
-From here, you may want to set up notifications or customize the list of rooms that shows up in navigation. To do that, visit a room and click on the "info" icon at the top of the screen. From here, you can view members, bookmark the room to make it more prominent in the navigation, or enable notifications to stay up to date.
+Next, you may want to set up notifications or customize which rooms appear in your navigation. Visit a room and click the "info" icon at the top of the screen. There you can view members, bookmark the room to make it more prominent in navigation, or enable notifications to stay up to date.
 
 ![](/images/34F0xVzKxz8oOafl8Oyba0JN1iU.png)
 
 ### Discovering Spaces
 
-It's also possible to browse spaces by visiting the discover page. If you're following people on Nostr, spaces that people in your social graph have joined will show up here, along with a list of a few members who you might know.
+You can also browse spaces on the discover page. If you follow people on Nostr, spaces that others in your social graph have joined show up here, along with a few members you might know.
 
 ![](/images/b5pmuXiTMtFMkNciSm5SRROnvx8.png)
 
-To join a space, simply click on the item and follow the prompts. It may be that the space is invite-only, in which case you may need to contact the moderator in order to get an invite code.
+To join a space, click on it and follow the prompts. Some spaces are invite-only, in which case you may need to contact a moderator for an invite code.
 
 ![](/images/LtDFmUBZ1oh4lx9kYp0f9lQgDo.png)

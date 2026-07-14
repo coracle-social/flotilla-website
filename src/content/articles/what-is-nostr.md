@@ -13,7 +13,7 @@ You've probably run into the word "Nostr" and bounced straight off a wall of jar
 
 Nostr is a set of shared rules for sending messages across the internet — a bit like email. With email, it doesn't matter that you use Gmail and a friend uses a different provider; you can still write to each other because everyone agrees on how mail moves around. Nostr works the same way, but for social apps and community chat. It isn't a single website or company you sign up with. It's a common standard that lots of different apps can speak, so they can all talk to each other.
 
-The problem it solves is ownership. On most platforms, your account belongs to the company running it, and they can suspend it, change the rules, or shut down and take your posts and contacts with them. On Nostr, your identity is a **key** — think of it like a passport you carry with you rather than a membership card the club hands out and can revoke. Your key has a public half you can share freely, like a username, and a secret half you keep to yourself. Because you hold it, no single app or server can lock you out or erase you.
+The problem it solves is ownership. On most platforms, your account belongs to the company running it, and they can suspend it, change the rules, or shut down and take your posts and contacts with them. On Nostr, your identity is a **key**. Your key has a public half you can share freely, like a username, and a secret half you keep to yourself. Because you hold it, no single app or server can lock you out or erase you.
 
 The messages themselves live on **relays** — servers that store and pass along posts, the way a post office receives and forwards mail. Different communities can use different relays, and since your key is yours, you can move between apps or communities without losing your identity, your posts, or the people you know. Flotilla is one app built on Nostr, and it's designed so you can use it without knowing any of this — but knowing it explains why a community here is one nobody can take away from you.
 
@@ -23,9 +23,9 @@ The messages themselves live on **relays** — servers that store and pass along
 
 ## Your identity is yours to keep
 
-It's worth slowing down on that key — it's the heart of what makes Nostr different, and the one thing worth taking seriously from day one.
+Keys are the heart of what makes Nostr different, and the one thing worth taking seriously from day one.
 
-Your key comes in two halves. The first is your **npub**, which works like a username: it's the public half, so you can share it with anyone who wants to find or follow you. The second is your **nsec**, which works like a password — except no one can reset it for you. Because your key isn't tied to any single app, the same identity carries your profile, your follows, and your posts across every Nostr app you use. Flotilla doesn't create your identity; it just lets you use one. That's what makes it impossible for Flotilla, or any community you join, to deplatform you off your own identity — you can always take your key and go elsewhere.
+Your key comes in two halves. The first is your **npub**, which works like a username: it's the public half, so you can share it with anyone who wants to find or follow you. The second is your **nsec**, which works like a password — except no one can reset it for you. Because your key isn't tied to any single app, the same identity carries your profile, your follows, and your posts across every Nostr app you use. Flotilla doesn't own your identity; you bring your own. That's what makes it impossible for Flotilla, or any community you join, to deplatform you — you can always take your key and go elsewhere.
 
 The catch is the flip side of owning something outright: there's no "forgot password" link, so keeping your key safe is up to you. When you sign up, save your key somewhere durable and private — a password manager is ideal, not a downloads folder or a note to yourself. Anyone who gets your nsec can act as you, and if you lose it with no backup, that identity is gone for good. It's a single step done once — and if holding a raw key feels like too much for now, there's a gentler email-based option we'll get to.
 
@@ -37,7 +37,7 @@ The catch is the flip side of owning something outright: there's no "forgot pass
 
 So that's your identity. Where do the actual communities live?
 
-A community on Nostr lives on a **relay** — the message-storing server we compared to a post office earlier. Someone runs each relay, often the community's own organizer. In Flotilla, a community is called a **Space**, and that Space isn't sitting on Flotilla's computers. It's hosted on a relay that someone chose to run, whether that's a machine they set up themselves or a managed hosting plan.
+A community on Nostr lives on a **relay** — the message-storing server we compared to a post office earlier. Someone runs each relay, often the community's own organizer. In Flotilla, a community is called a **Space**, and is hosted on a relay that someone chose to run, whether that's a machine they set up themselves or a managed hosting plan.
 
 This is the part that works differently from Discord or Slack: the community and the app are two separate things. Flotilla is just the app you use to open a window into a Space; the Space itself exists on its relay whether or not you use Flotilla to look at it. Inside a Space, conversation happens in **Rooms**, which are simply channels like `#general` or `#support`.
 
@@ -66,13 +66,15 @@ And it isn't only text. Some Rooms are live voice rooms, with video and screen s
 
 ## Try it in five minutes
 
-The fastest way to understand Nostr is to use something built on it. Flotilla is a group chat app — a bit like Slack or Discord — that runs on the Nostr network. There's nothing to install to get started: open [app.flotilla.social](https://app.flotilla.social) in any web browser, on your phone or your computer, and you're already there.
+The fastest way to understand Nostr is to use something built on it. Flotilla is a group chat app that runs on the Nostr network. There's nothing to install to get started: open [app.flotilla.social](https://app.flotilla.social) in any web browser, on your phone or your computer, and you're already there.
 
 When you arrive, you can either log in or sign up. If you already have a Nostr key from another app, log in with that. If you're new, choose sign up and Flotilla will create a key for you, store it in your browser, and then offer you a copy to save somewhere safe — this is the moment to tuck it into that password manager.
 
+Once you have your key, you can explore one of the [hundreds of Nostr applications](https://nostrapps.com/) and log in with the **same identity**!
+
 If keys sound like more than you want to deal with today, you don't have to touch them. Flotilla also offers "Log in with Email," which works the way you'd expect: an email address and a password, or a one-time code sent to your inbox if you forget it. There's still a real Nostr identity behind the scenes — you're just not the one holding the key file, and you can switch to holding it yourself later.
 
-Once you're in, you can fill out a profile — a nickname, a picture, a short bio — but all of it is optional, and you can skip straight to joining a conversation. That really is the whole on-ramp.
+If you're more advanced, you can also use an app that supports "remote signing", like [Primal](https://play.google.com/store/search?q=primal%20nostr&c=apps&hl=en_US), which is itself a Nostr application, and allows you to log in to other apps on the same device.
 
 **Learn more:**
 - [Getting Started](/articles/getting-started)
