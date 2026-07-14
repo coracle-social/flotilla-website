@@ -7,6 +7,8 @@ category: basics
 
 # Installing Flotilla on Web and Mobile
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 Flotilla isn't locked behind an app store account or a platform login — it's a Nostr client, so the only thing you need to bring is your key (see [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity)). How you *run* it, though, is up to you: in a browser tab, installed as an app on your home screen, or as a native download on Android or iOS.
 
 ## Use it in a browser

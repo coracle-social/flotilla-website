@@ -7,6 +7,8 @@ category: advanced
 
 # Enabling Voice and Video Calls on Your Relay (LiveKit)
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Flotilla supports voice rooms and video calls with screen sharing, but the relay has to be configured before members ever see the option. This article is for relay operators — people [self-hosting zooid](/articles/self-hosting-a-space) or anyone who wants to understand what's happening behind a hosted relay's feature toggles. If you're just looking for how to use voice and video as a member, see [Spaces and Rooms Explained](/articles/spaces-and-rooms-explained) instead.
 
 ## Why you need a LiveKit server

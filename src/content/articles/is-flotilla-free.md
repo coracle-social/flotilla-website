@@ -7,6 +7,8 @@ category: basics
 
 # Is Flotilla Free?
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Yes. Using Flotilla — on the web, as a PWA, on Android, or on iOS — is completely free, and so is joining and participating in communities. There's no subscription, no premium tier, and no feature in the app itself that's locked behind a payment.
 
 ## Nothing you do as a member costs anything

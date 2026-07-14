@@ -9,6 +9,8 @@ category: advanced
 
 # Running a Community
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Running a community is a commitment to people, not just a place for conversation. Healthy communities make it easier for members to connect, collaborate, and support each other in real life as well as online.
 
 ### Community Identity

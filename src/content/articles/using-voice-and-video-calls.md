@@ -7,6 +7,8 @@ category: basics
 
 # Using Voice and Video Calls
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Some Rooms in a Space are voice Rooms instead of text Rooms — live audio, with video and screen sharing available once you're in. They work like any other Room type: you'll find them in the sidebar alongside the text Rooms, marked with a different icon. This article covers joining and using one as a member. If you're setting up voice and video on a relay you run, see [Enabling Voice and Video Calls on Your Relay](/articles/enabling-voice-and-video-calls-on-your-relay) instead; if you just want the bigger picture of how Rooms fit into a Space, see [Spaces and Rooms Explained](/articles/spaces-and-rooms-explained).
 
 ## Joining a Voice Room

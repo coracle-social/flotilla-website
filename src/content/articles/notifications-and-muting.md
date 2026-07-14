@@ -7,6 +7,8 @@ category: basics
 
 # Notifications and Muting
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 By default, Flotilla notifies you about activity in every [space](/articles/spaces-and-rooms-explained) and room you belong to. That's fine for a quiet space, but once you're in a handful of active communities it's worth tuning things down to just what you care about. Flotilla gives you three separate levers: which rooms and spaces can ping you, which kinds of activity count as a notification, and who you'd rather not hear from at all.
 
 ## Per-room and per-space notifications

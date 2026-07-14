@@ -7,6 +7,8 @@ category: basics
 
 # Setting Up Your Profile
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 Once you're signed in, you can change how you show up to everyone else at any time — your name, picture, bio, and a couple of optional extras. None of this touches your underlying Nostr key; it's just the public information attached to it. Here's where to find it and what each field actually does.
 
 ## Where to edit it

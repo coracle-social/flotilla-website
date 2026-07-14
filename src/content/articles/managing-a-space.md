@@ -9,6 +9,8 @@ category: advanced
 
 # Managing a Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Flotilla comes with a number of features specifically designed to help community organizers manage membership, moderate content, and control access.
 
 Before we get started, it's important to understand that spaces in Flotilla are always hosted by [Nostr relays](https://nostr.com/), which are a special type of server. The level of support for various management features will depend on what kind of Nostr relay you're hosting your space on — we recommend using [Zooid by Coracle](https://github.com/coracle-social/zooid), or signing up with [Hosting by Coracle](https://hosting.coracle.social/).

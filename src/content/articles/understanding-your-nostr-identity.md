@@ -7,6 +7,8 @@ category: basics
 
 # Understanding Your Nostr Identity
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 If you've used [Getting Started](/articles/getting-started) to sign up for Flotilla, you already have a Nostr key. This article explains what that actually means, because it's the single biggest difference between Flotilla and a normal app — and the one thing you can't afford to misunderstand.
 
 ## An identity you own, not an account you rent

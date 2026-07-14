@@ -9,6 +9,8 @@ category: basics
 
 # Is Flotilla Private?
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 The topic of digital privacy is of great importance, but also quite complex. Calling something "private" can mean different things to different people — anything from "trust me bro" to full end-to-end encrypted communications.
 
 There are two main areas covered by Flotilla where privacy requirements and guarantees differ: community spaces and direct messages.

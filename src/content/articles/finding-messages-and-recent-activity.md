@@ -7,6 +7,8 @@ category: basics
 
 # Finding Messages and Recent Activity
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 A busy [space](/articles/spaces-and-rooms-explained) can easily outpace you — a dozen rooms, a handful of threads, maybe a poll or two, all moving at once. Flotilla gives you two tools for catching up and digging back through it: **Recent Activity**, a feed that pulls everything new into one place, and **Search Content**, a dialog for finding something specific you remember seeing.
 
 ## Catching up with Recent Activity

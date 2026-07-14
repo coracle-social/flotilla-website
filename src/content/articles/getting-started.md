@@ -9,6 +9,8 @@ category: basics
 
 # Getting Started
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 To get started, visit [app.flotilla.social](https://app.flotilla.social). You'll be offered an option — log in, or sign up:
 
 ![](/images/EFY4bw3U7nueQ7Hkznk0FzFqa3A.png)

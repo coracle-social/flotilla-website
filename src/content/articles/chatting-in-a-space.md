@@ -7,6 +7,8 @@ category: basics
 
 # Chatting in a Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Once you've [joined a space](/articles/joining-a-space), most of your time there happens in its rooms — the channels described in [Spaces and Rooms Explained](/articles/spaces-and-rooms-explained). Text rooms work like real-time chat: pick a room from the navigation, type in the composer at the bottom, and send. This article covers the everyday mechanics of posting and interacting with messages once you're in one.
 
 ## Replying, quoting, and mentioning

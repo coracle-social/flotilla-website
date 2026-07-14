@@ -7,6 +7,8 @@ category: basics
 
 # Nostr Terms Explained
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 Flotilla is built to be usable without knowing anything about Nostr relays or cryptographic keys — but you'll still run into a handful of Nostr-specific words in the app itself, and in the rest of this knowledge base. This page isn't a deep dive into any of them; it's a quick-reference index. Each entry gives you a one- or two-sentence answer, then links out to the article that actually explains it properly.
 
 ## Space vs. Room

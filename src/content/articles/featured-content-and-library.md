@@ -7,6 +7,8 @@ category: advanced
 
 # Featured Content and the Library
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Chat moves fast, and even the best-organized [rooms](/articles/spaces-and-rooms-explained) bury useful things under new messages within a day. Flotilla gives organizers two tools built specifically to fight that: **Featured Content**, which surfaces a handful of important items on your space's About page, and the **Library**, a searchable collection of pinned links and events that sticks around indefinitely. Neither replaces chat — they sit alongside it as the "start here" and "keep this handy" layers of your space.
 
 ## Featured Content

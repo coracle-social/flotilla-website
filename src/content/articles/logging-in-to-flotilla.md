@@ -7,6 +7,8 @@ category: basics
 
 # Ways to Log In to Flotilla
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 Flotilla doesn't have a username-and-password account — you prove who you are with a Nostr key (see [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity) if you haven't already). But "using your key" isn't just one thing: Flotilla's login screen offers several ways to bring that key in, and they aren't equally safe. This article walks through each one.
 
 ## Brand new to Nostr? Generate a key

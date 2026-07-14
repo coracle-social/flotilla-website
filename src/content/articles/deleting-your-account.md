@@ -7,6 +7,8 @@ category: basics
 
 # Can I Delete My Account or Data?
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 "Delete my account" is a normal thing to want, and on Nostr the honest answer is more complicated than a button. There's no platform account behind your Flotilla identity — see [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity) for what your key actually is. That means there's nothing for Flotilla, or anyone else, to close, suspend, or erase on your behalf. What Flotilla *can* do is delete the content you've published and ask relays to stop serving it. Here's exactly what that does and doesn't accomplish.
 
 ## There's no account to revoke

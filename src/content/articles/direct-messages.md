@@ -7,6 +7,8 @@ category: basics
 
 # Direct Messages
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Not every conversation belongs in a room. Flotilla also gives you direct messages (DMs) — private conversations with one other person or a small group, completely separate from any [space](/articles/spaces-and-rooms-explained). You don't need to share a space with someone to message them; all you need is their Nostr identity.
 
 ## Starting a conversation

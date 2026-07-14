@@ -7,6 +7,8 @@ category: basics
 
 # Customizing How Flotilla Looks and Feels
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Flotilla ships with a handful of display and reading-comfort settings that are easy to miss because they're split across two different places: a quick toggle in the settings menu, and a fuller set of controls on the Content settings page. This article walks through both.
 
 ## Theme: light or dark

@@ -9,6 +9,8 @@ category: basics
 
 # Community and Support
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 We're glad you're interested in Flotilla! We invite you to join us in our [community chat](https://app.flotilla.social/join?r=meta.spaces.coracle.social&c=LE7S3IA2), whether you're looking for help, or just want to talk to other community organizers like yourself.
 
 Running a community is a big job, so we wanted to go beyond just making software and throwing it over the fence. Instead, we want to give you the resources you need to help your community flourish! In addition to chatting with other community organizers, you can also read our [community organizers guide](/articles/running-a-community) which includes some tips for nurturing a healthy group.

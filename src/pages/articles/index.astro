@@ -4,40 +4,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Container from '../../components/Container.astro';
 
 const articles = await getCollection('articles');
+const bySlug = new Map(articles.map((a) => [a.id, a] as const));
 
 const sortByOrder = (a: (typeof articles)[number], b: (typeof articles)[number]) =>
   a.data.order - b.data.order;
 
-const featured = articles
-  .filter((a) => !a.data.category)
-  .sort(sortByOrder);
-
-const basics = articles
-  .filter((a) => a.data.category === 'basics')
-  .sort(sortByOrder);
-
-const advanced = articles
-  .filter((a) => a.data.category === 'advanced')
-  .sort(sortByOrder);
-
 // Pull out a 1-line summary from the body if no description is set.
 function summarize(article: (typeof articles)[number]): string {
-  if (article.data.description) {
-    // The seed description is the same generic site copy on every article,
-    // which doesn't help here — try to do better from the body.
-  }
   const body = article.body ?? '';
-  // Strip leading "# Title", then grab first non-empty paragraph.
   const stripped = body
     .replace(/^---[\s\S]*?---\s*/m, '')
     .replace(/^#\s.*$/m, '')
     .trim();
   const firstPara = stripped.split(/\n\s*\n/).find((chunk) => {
     const c = chunk.trim();
-    return c.length > 0 && !c.startsWith('#') && !c.startsWith('![') && !c.startsWith('|');
+    return (
+      c.length > 0 &&
+      !c.startsWith('#') &&
+      !c.startsWith('![') &&
+      !c.startsWith('|') &&
+      !c.startsWith('*Part of our guide') &&
+      !c.startsWith('> ')
+    );
   });
   if (!firstPara) return article.data.description ?? '';
-  // Strip markdown link syntax for the preview.
   return firstPara
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
     .replace(/[*_`]/g, '')
@@ -45,27 +35,98 @@ function summarize(article: (typeof articles)[number]): string {
     .trim();
 }
 
-const sections = [
-  { id: 'basics', title: 'The Basics', items: basics },
-  { id: 'advanced', title: 'Advanced', items: advanced },
-];
-
-const featuredArticle = featured[0];
-const featuredSummary = featuredArticle ? summarize(featuredArticle) : '';
-
-// Everything the search box matches against, precomputed at build time. The
-// description is included as well as the summary: summarize() deliberately
-// ignores it, so a term that only appears there would otherwise never match.
 function searchText(article: (typeof articles)[number]): string {
-  return [
-    article.data.title,
-    article.data.description ?? '',
-    article.data.category ?? '',
-    article.id,
-    summarize(article),
-  ]
+  return [article.data.title, article.data.description ?? '', article.id, summarize(article)]
     .join(' ')
     .toLowerCase();
+}
+
+// Organize the knowledge base by topic cluster, with the two pillar guides
+// featured up top. Keep this list in sync when adding articles — anything not
+// placed here falls into a "More" catch-all so it never disappears.
+const CLUSTERS = [
+  {
+    id: 'start',
+    title: 'Start here',
+    featured: true,
+    slugs: ['how-to-run-an-online-community', 'what-is-nostr'],
+  },
+  {
+    id: 'getting-started',
+    title: 'Getting started',
+    slugs: [
+      'what-is-flotilla',
+      'getting-started',
+      'installing-flotilla',
+      'logging-in-to-flotilla',
+      'setting-up-your-profile',
+      'joining-a-space',
+    ],
+  },
+  {
+    id: 'nostr',
+    title: 'Understanding Nostr',
+    slugs: [
+      'nostr-terms-explained',
+      'understanding-your-nostr-identity',
+      'backing-up-and-recovering-your-account',
+    ],
+  },
+  {
+    id: 'using',
+    title: 'Using Flotilla',
+    slugs: [
+      'spaces-and-rooms-explained',
+      'chatting-in-a-space',
+      'direct-messages',
+      'using-voice-and-video-calls',
+      'finding-messages-and-recent-activity',
+      'notifications-and-muting',
+      'featured-content-and-library',
+      'zaps-and-wallet',
+      'customizing-how-flotilla-looks',
+    ],
+  },
+  {
+    id: 'running',
+    title: 'Running a community',
+    slugs: ['running-a-community', 'creating-a-space', 'managing-a-space', 'controlling-space-access'],
+  },
+  {
+    id: 'hosting',
+    title: 'Hosting your space',
+    slugs: [
+      'coracle-hosting',
+      'managing-your-hosted-relay',
+      'hosting-billing',
+      'custom-domain',
+      'self-hosting-a-space',
+      'setting-up-media-storage-on-your-relay',
+      'enabling-voice-and-video-calls-on-your-relay',
+      'backing-up-and-upgrading-a-relay',
+    ],
+  },
+  {
+    id: 'privacy',
+    title: 'Privacy, cost & account',
+    slugs: ['is-flotilla-private', 'privacy-settings', 'deleting-your-account', 'is-flotilla-free'],
+  },
+  {
+    id: 'help',
+    title: 'Help & community',
+    slugs: ['community-and-support'],
+  },
+];
+
+const placed = new Set(CLUSTERS.flatMap((c) => c.slugs));
+const sections = CLUSTERS.map((c) => ({
+  ...c,
+  items: c.slugs.map((s) => bySlug.get(s)).filter((a): a is (typeof articles)[number] => Boolean(a)),
+})).filter((c) => c.items.length > 0);
+
+const leftover = articles.filter((a) => !placed.has(a.id)).sort(sortByOrder);
+if (leftover.length) {
+  sections.push({ id: 'more', title: 'More', featured: false, slugs: [], items: leftover });
 }
 ---
 
@@ -82,13 +143,12 @@ function searchText(article: (typeof articles)[number]): string {
         Guides &amp; resources
       </h1>
       <p class="mt-5 text-lg text-text-muted">
-        Welcome to the Flotilla knowledge base. Find guides for using the platform, answers
-        to common questions, and tips for running a healthy community.
+        Welcome to the Flotilla knowledge base. Start with a guide, or jump to the topic you need —
+        from joining your first space to running your own community.
       </p>
     </header>
 
-    {/* Revealed by the script below, so it's never a dead input without JS.
-        Sits outside the header so it spans the full container width. */}
+    {/* Revealed by the script below, so it's never a dead input without JS. */}
     <div class="mb-10 md:mb-12" data-search-wrap hidden>
       <label for="article-search" class="sr-only">Search articles</label>
       <div class="search-field relative">
@@ -118,36 +178,6 @@ function searchText(article: (typeof articles)[number]): string {
       <p class="sr-only" role="status" aria-live="polite" data-status></p>
     </div>
 
-    {featuredArticle && (
-      <a
-        href={`/articles/${featuredArticle.id}`}
-        class="group relative block rounded-xl border border-border bg-surface p-7 md:p-10 mb-16 md:mb-20 overflow-hidden hover:border-primary/50 transition-colors"
-        data-featured
-        data-search={searchText(featuredArticle)}
-      >
-        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
-        <div class="relative flex flex-col md:flex-row md:items-center md:gap-10">
-          <div class="flex-1">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-primary-soft mb-3">
-              Start here
-            </p>
-            <h2 class="text-2xl md:text-3xl font-black text-text leading-tight">
-              {featuredArticle.data.title}
-            </h2>
-            <p class="mt-4 text-text-muted leading-relaxed line-clamp-3">
-              {featuredSummary}
-            </p>
-          </div>
-          <div class="mt-6 md:mt-0 md:flex-shrink-0">
-            <span class="inline-flex items-center gap-2 font-bold text-text group-hover:text-primary-soft transition-colors">
-              Read article
-              <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">&rarr;</span>
-            </span>
-          </div>
-        </div>
-      </a>
-    )}
-
     {sections.map((section) => (
       <section class="mb-14 md:mb-20 last:mb-0" data-section>
         <div class="flex items-end justify-between mb-6 md:mb-8 border-b border-border-soft pb-3">
@@ -156,27 +186,58 @@ function searchText(article: (typeof articles)[number]): string {
             {section.items.length} {section.items.length === 1 ? 'article' : 'articles'}
           </span>
         </div>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
-          {section.items.map((article) => (
-            <a
-              href={`/articles/${article.id}`}
-              class="group flex flex-col rounded-lg border border-border-soft bg-surface/40 p-6 hover:border-border hover:bg-surface transition-colors"
-              data-card
-              data-search={searchText(article)}
-            >
-              <h3 class="text-lg font-black text-text leading-snug group-hover:text-primary-soft transition-colors">
-                {article.data.title}
-              </h3>
-              <p class="mt-3 text-sm text-text-muted leading-relaxed line-clamp-3 flex-1">
-                {summarize(article)}
-              </p>
-              <span class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] text-text-dim group-hover:text-primary-soft transition-colors">
-                Read more
-                <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
-              </span>
-            </a>
-          ))}
-        </div>
+
+        {section.featured ? (
+          <div class="grid gap-5 md:grid-cols-2">
+            {section.items.map((article) => (
+              <a
+                href={`/articles/${article.id}`}
+                class="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-surface p-7 hover:border-primary/50 transition-colors"
+                data-card
+                data-search={searchText(article)}
+              >
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
+                <div class="relative flex flex-1 flex-col">
+                  <p class="font-mono text-xs uppercase tracking-[0.2em] text-primary-soft mb-3">
+                    Guide
+                  </p>
+                  <h3 class="text-xl md:text-2xl font-black text-text leading-tight group-hover:text-primary-soft transition-colors">
+                    {article.data.title}
+                  </h3>
+                  <p class="mt-3 text-text-muted leading-relaxed line-clamp-3 flex-1">
+                    {summarize(article)}
+                  </p>
+                  <span class="mt-5 inline-flex items-center gap-2 font-bold text-text group-hover:text-primary-soft transition-colors">
+                    Read guide
+                    <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">&rarr;</span>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div class="grid gap-5 sm:grid-cols-2">
+            {section.items.map((article) => (
+              <a
+                href={`/articles/${article.id}`}
+                class="group flex flex-col rounded-lg border border-border-soft bg-surface/40 p-6 hover:border-border hover:bg-surface transition-colors"
+                data-card
+                data-search={searchText(article)}
+              >
+                <h3 class="text-lg font-black text-text leading-snug group-hover:text-primary-soft transition-colors">
+                  {article.data.title}
+                </h3>
+                <p class="mt-3 text-sm text-text-muted leading-relaxed line-clamp-3 flex-1">
+                  {summarize(article)}
+                </p>
+                <span class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] text-text-dim group-hover:text-primary-soft transition-colors">
+                  Read more
+                  <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
       </section>
     ))}
 
@@ -192,7 +253,6 @@ function searchText(article: (typeof articles)[number]): string {
   const status = document.querySelector<HTMLElement>('[data-status]');
   const empty = document.querySelector<HTMLElement>('[data-empty]');
   const emptyTerm = document.querySelector<HTMLElement>('[data-empty-term]');
-  const featured = document.querySelector<HTMLElement>('[data-featured]');
   const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-section]'));
 
   if (wrap && input && status && empty && emptyTerm) {
@@ -204,12 +264,6 @@ function searchText(article: (typeof articles)[number]): string {
       const term = raw.trim().toLowerCase();
       const matches = (el: HTMLElement) => !term || (el.dataset.search ?? '').includes(term);
       let total = 0;
-
-      if (featured) {
-        const hit = matches(featured);
-        featured.hidden = !hit;
-        if (hit) total += 1;
-      }
 
       for (const section of sections) {
         let shown = 0;
@@ -237,7 +291,6 @@ function searchText(article: (typeof articles)[number]): string {
       }
     });
 
-    // Browsers restore input values on back/forward; re-filter so the DOM agrees.
     if (input.value) apply(input.value);
   }
 </script>
@@ -250,9 +303,6 @@ function searchText(article: (typeof articles)[number]): string {
     overflow: hidden;
   }
 
-  /* The cards carry `display: flex` from a utility class, which outranks the
-     UA stylesheet's `[hidden] { display: none }`. Without this they'd stay
-     visible when the filter hides them. */
   [hidden] {
     display: none !important;
   }
@@ -263,7 +313,6 @@ function searchText(article: (typeof articles)[number]): string {
     box-shadow: 0 0 0 3px rgba(113, 97, 255, 0.25);
   }
 
-  /* Safari renders a native clear button; we have Escape and it clashes. */
   .search-field input::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;

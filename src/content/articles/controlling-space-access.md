@@ -7,6 +7,8 @@ category: advanced
 
 # Controlling Who Can Join Your Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 A new space starts locked down: until you say otherwise, only people you specifically invite or add can read or post in it. Opening things up, or controlling exactly how people get in, touches all three parts of the Flotilla stack — this article walks through each one from the space owner's side.
 
 ## Invite-only by default

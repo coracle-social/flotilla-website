@@ -7,6 +7,8 @@ category: advanced
 
 # Setting Up Media Storage on Your Relay (Blossom)
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 When someone uploads an image or file in Flotilla, it isn't stored as a regular Nostr event — it's handled by Blossom, a protocol for hosting binary media alongside a relay. On a self-hosted [zooid](/articles/self-hosting-a-space) relay, Blossom is **off by default**. If you followed the self-hosting walkthrough, its sample config already flips `[blossom].enabled = true`; this article explains what that actually turns on, and the choices hiding underneath it.
 
 ## Read this before you enable it

@@ -9,6 +9,8 @@ category: basics
 
 # Joining a Space
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 There are two main ways to join a space on Flotilla — by using an invite link, or by browsing to discover existing groups. If you're a community organizer, we encourage you to invite your members using an invite link — the flow is much simpler for everyone involved.
 
 ### Using an Invite Link

@@ -8,6 +8,8 @@ order: 1
 
 # What is Flotilla?
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 Flotilla is **software for sovereign communities**. It uses the nostr protocol to create a new kind of community group, which:
 
 - Can be hosted on your own server, or use any service provider you choose.

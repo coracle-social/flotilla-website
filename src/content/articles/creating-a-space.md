@@ -9,6 +9,8 @@ category: advanced
 
 # Creating a Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 One of the things that makes Flotilla really special is that we don't host your community, we only provide the software that you use to access it.
 
 Instead, your space is hosted on a server you control — either by contracting with a hosting provider, or by running your own server. Flotilla spaces are also Nostr relays, which means you get all the benefits of the Nostr app ecosystem for free!

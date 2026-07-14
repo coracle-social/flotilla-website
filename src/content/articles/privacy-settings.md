@@ -7,6 +7,8 @@ category: basics
 
 # Privacy Settings: Limiting What You Leak
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 [Is Flotilla Private?](/articles/is-flotilla-private) covers what "private" means for your published content and messages. This article is the practical follow-up: the actual controls in Flotilla that limit what you leak to relays and third parties without meaning to.
 
 ## Where to find them

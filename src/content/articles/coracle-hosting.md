@@ -7,6 +7,8 @@ category: advanced
 
 # Hosting Your Space with Coracle
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 If you're setting up a community, you'll end up in two different places: Flotilla, where your members actually chat, and Coracle Hosting, where you create and pay for the relay that Flotilla connects to. They look and feel completely different on purpose — they're separate products doing separate jobs — and mixing them up is the single easiest way to get confused while setting up a space.
 
 ## Two products, not one

@@ -7,6 +7,8 @@ category: basics
 
 # Zaps and Your Wallet
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 A "zap" is a Lightning payment — a tip in sats (satoshis, fractions of a bitcoin) that you send directly to another person in response to something they posted. Zaps are a core part of how Nostr communities show appreciation: instead of just reacting with an emoji, you can back it up with real value. You can zap a message in a [room](/articles/chatting-in-a-space), a thread, a calendar event, or a fundraising goal.
 
 ## Sending a zap

@@ -7,6 +7,8 @@ category: advanced
 
 # Managing Your Hosted Relay in the Coracle Panel
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Once your space is live (see [Hosting Your Space with Coracle](/articles/coracle-hosting)), the Coracle hosting panel is where you operate the relay itself — plan, features, access policy, and billing status. This is separate from Flotilla, which is where members actually chat. Keep that boundary in mind: a few things you might expect to find in the hosting panel, like approving or banning members, live in Flotilla instead. More on that below.
 
 ## The Relay Detail Page

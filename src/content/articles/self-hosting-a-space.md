@@ -9,6 +9,8 @@ category: advanced
 
 # Self Hosting a Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 One of the great things about the cryptographic identities Nostr uses to identify users is that they automatically reduce your exposure to de-plaforming, simply because your social identity can't be taken away from you. And if you keep a backup of your events, you're also safe from losing your content and social graph! But there's no way to get around the fact that *someone* has to run the servers.
 
 As a regular Nostr user, self-hosting is mostly a nice-to-have. But if you're a community organizer, you have people who depend on you to keep their content private and secure. Depending on the size and nature of your community, as well as your own level of technical skill, it might be worthwhile to run your space on infrastructure you control. This decision comes with certain trade-offs, but it can be well worthwhile depending on your goals.

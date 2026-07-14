@@ -7,6 +7,8 @@ category: basics
 
 # Backing Up and Recovering Your Account
 
+*Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
+
 Your Nostr key *is* your Flotilla account. [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity) explains why that's a feature, not a bug — but it also means there's no "forgot password" link for a self-custodied key, and no support desk that can hand it back to you. This article covers the operational side: backing your key up properly, getting into your account on a new device, finding your key again later, and what recovery looks like if you signed up with email instead.
 
 ## Back it up when you sign up

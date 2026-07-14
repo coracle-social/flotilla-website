@@ -7,6 +7,8 @@ category: advanced
 
 # Backing Up and Upgrading Your Self-Hosted Relay
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 If you followed [Self Hosting a Space](/articles/self-hosting-a-space) to stand up your own zooid relay, you now own the ongoing job of keeping it backed up and up to date. zooid doesn't do either of these for you automatically, and getting them wrong in the wrong way can genuinely hurt — losing the wrong file changes your relay's identity, and copying the wrong file at the wrong time can hand you a corrupt database. This article covers both, specifically for zooid.
 
 ## What to back up

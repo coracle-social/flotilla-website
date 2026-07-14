@@ -7,6 +7,8 @@ category: basics
 
 # Spaces and Rooms Explained
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 If you're coming from Discord or Slack, Flotilla will feel familiar fast — but a couple of the underlying concepts work differently, and it's worth understanding them before you dive in. The two you'll run into immediately are **Spaces** and **Rooms**.
 
 ## Term Map: Discord/Slack → Flotilla

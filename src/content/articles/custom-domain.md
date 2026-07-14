@@ -7,6 +7,8 @@ category: advanced
 
 # Using a Custom Domain for Your Hosted Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 Every space hosted with Coracle gets a subdomain by default, something like `myspace.spaces.coracle.social`. That works fine on its own, but if you'd rather your community live at your own domain — `chat.mycommunity.com`, say — you can point that domain at your hosted relay instead. This is set up in the Coracle hosting panel, not in Flotilla; it's a property of the relay, not of anything in the chat app itself.
 
 ## Adding the domain

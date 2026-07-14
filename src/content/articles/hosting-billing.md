@@ -7,6 +7,8 @@ category: advanced
 
 # Billing and Payments for Your Hosted Space
 
+*Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
+
 If you're paying for a hosted relay, billing lives entirely in the Coracle Hosting control panel — not in Flotilla. Flotilla is where your members chat; the hosting dashboard is where you manage your plan and pay for it. See [Hosting Your Space with Coracle](/articles/coracle-hosting) if you haven't set up a space yet, or [Managing Your Hosted Relay in the Coracle Panel](/articles/managing-your-hosted-relay) for changing plans and other day-to-day admin.
 
 ## How you can pay
