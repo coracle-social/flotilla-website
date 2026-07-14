@@ -1,5 +1,7 @@
 ---
 title: "Is Flotilla Private?"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: is-flotilla-private
 source: https://flotilla.social/articles/is-flotilla-private
 description: "What \"private\" actually means in Flotilla, and the different guarantees that apply to community spaces versus direct messages."

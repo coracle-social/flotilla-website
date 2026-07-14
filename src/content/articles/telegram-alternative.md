@@ -1,5 +1,7 @@
 ---
 title: "Flotilla: A Telegram Alternative for Community Owners"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: telegram-alternative
 description: "An honest look at Flotilla as an alternative to Telegram for organizers who want real community structure, moderation, and true ownership."
 order: 42

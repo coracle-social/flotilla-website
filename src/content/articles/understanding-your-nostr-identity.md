@@ -1,5 +1,7 @@
 ---
 title: "Understanding Your Nostr Identity"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "What a Nostr key actually is, why it means you own your identity instead of renting an account, and how to keep it safe."
 order: 4
 category: basics

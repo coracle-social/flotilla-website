@@ -1,5 +1,7 @@
 ---
 title: "Joining a Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: joining-a-space
 source: https://flotilla.social/articles/joining-a-space
 description: "Join a community with an invite link or by browsing the directory of public spaces."

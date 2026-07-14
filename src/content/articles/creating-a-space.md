@@ -1,5 +1,7 @@
 ---
 title: "Creating a Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: creating-a-space
 source: https://flotilla.social/articles/creating-a-space
 description: "Flotilla doesn't host your community — this explains what a space really is and how to get one, hosted or self-run."

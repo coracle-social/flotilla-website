@@ -1,5 +1,7 @@
 ---
 title: "What Is Nostr? A Plain-English Guide"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "A jargon-free introduction to Nostr: what it is, why it matters, and how it lets you own your identity and community online."
 order: 0.5
 category: basics

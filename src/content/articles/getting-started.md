@@ -1,5 +1,7 @@
 ---
 title: "Getting Started"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: getting-started
 source: https://flotilla.social/articles/getting-started
 description: "Two ways to create a Flotilla account — a simple email sign-up or generating your own key — plus how to log in with an existing profile."

@@ -13,6 +13,9 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
+  /** JSON-LD structured data to embed in <head> (e.g. an Article schema). */
+  jsonLd?: Record<string, unknown> | null;
 }
 
 const DEFAULT_DESCRIPTION =
@@ -22,6 +25,8 @@ const {
   title,
   description = DEFAULT_DESCRIPTION,
   ogImage = '/og-image.png',
+  ogType = 'website',
+  jsonLd = null,
 } = Astro.props;
 
 const fullTitle = title === 'Flotilla' ? title : `${title} — Flotilla`;
@@ -41,7 +46,7 @@ const ogImageAbsolute = new URL(ogImage, Astro.site).href;
     <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageAbsolute} />
@@ -50,6 +55,12 @@ const ogImageAbsolute = new URL(ogImage, Astro.site).href;
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageAbsolute} />
+    {jsonLd && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(jsonLd)}
+      />
+    )}
   </head>
   <body class="bg-bg text-text">
     <Nav />

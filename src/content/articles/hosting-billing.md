@@ -1,5 +1,7 @@
 ---
 title: "Billing and Payments for Your Hosted Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "How billing works for a hosted space — Lightning and card autopay, invoices, the grace period, and what happens if you do not pay."
 order: 26
 category: advanced

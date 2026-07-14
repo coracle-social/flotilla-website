@@ -1,5 +1,7 @@
 ---
 title: "Self Hosting a Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: self-hosting-a-space
 source: https://flotilla.social/articles/self-hosting-a-space
 description: "Provision a server, run the zooid relay behind nginx, and connect your self-hosted space to Flotilla."

@@ -1,5 +1,7 @@
 ---
 title: "Nostr Terms Explained"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "A plain-language glossary of the Nostr words you'll meet in Flotilla, each explained in a sentence or two with a link to the article that covers it fully."
 order: 5
 category: basics

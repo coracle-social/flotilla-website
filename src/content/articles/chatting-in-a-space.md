@@ -1,5 +1,7 @@
 ---
 title: "Chatting in a Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Posting, replying, reacting, editing, and sharing media in a space's rooms — the day-to-day of using Flotilla."
 order: 12
 category: basics

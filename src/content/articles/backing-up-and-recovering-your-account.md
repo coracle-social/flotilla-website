@@ -1,5 +1,7 @@
 ---
 title: "Backing Up and Recovering Your Account"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "How to back up your Nostr key, get back into your account on a new device, copy your key again from settings, and how recovery differs for email accounts."
 order: 7
 category: basics

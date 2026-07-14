@@ -1,5 +1,7 @@
 ---
 title: "Can I Delete My Account or Data?"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Why there is no account to close on Nostr, what deleting a message or clearing your profile actually does, and why anything you publish is best treated as permanent."
 order: 21
 category: basics

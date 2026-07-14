@@ -1,5 +1,7 @@
 ---
 title: "Customizing How Flotilla Looks and Feels"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Adjust Flotilla's appearance and reading experience: light/dark theme, font size, sensitive-content blur, media/link previews, and the send delay, plus exactly where each setting lives."
 order: 17
 category: basics

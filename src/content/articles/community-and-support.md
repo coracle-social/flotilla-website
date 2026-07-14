@@ -1,5 +1,7 @@
 ---
 title: "Community and Support"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: community-and-support
 source: https://flotilla.social/articles/community-and-support
 description: "Where to get help, meet other organizers, and talk to the people building Flotilla."

@@ -1,5 +1,7 @@
 ---
 title: "The Platform Plan"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: platform-plan
 description: "Flotilla's Platform plan: a white-labeled app and website we build, host, and maintain for you — with hands-on developer support built in."
 order: 36

@@ -1,5 +1,7 @@
 ---
 title: "Using a Custom Domain for Your Hosted Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Point your own domain at a Coracle-hosted space, including the exact DNS record and the apex-domain gotcha."
 order: 27
 category: advanced

@@ -1,5 +1,7 @@
 ---
 title: "Controlling Who Can Join Your Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Who can join your space — invite links, adding members by pubkey, and the open-vs-private access policy."
 order: 32
 category: advanced

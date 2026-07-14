@@ -1,5 +1,7 @@
 ---
 title: "Flotilla as a Slack Alternative"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: slack-alternative
 description: "Flotilla is an alternative to Slack for communities that want to own their space and data instead of paying per seat."
 order: 40

@@ -1,5 +1,7 @@
 ---
 title: "Managing a Space"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: managing-a-space
 source: https://flotilla.social/articles/managing-a-space
 description: "Space settings, membership, roles, bans, reports, and room permissions for community organizers."

@@ -1,5 +1,7 @@
 ---
 title: "How to Run an Online Community You Actually Own"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "A practical, plain-English guide to starting, hosting, growing, and moderating an online community you truly own."
 order: 0
 category: basics

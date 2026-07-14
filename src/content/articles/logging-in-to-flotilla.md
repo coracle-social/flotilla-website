@@ -1,5 +1,7 @@
 ---
 title: "Ways to Log In to Flotilla"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Every way to sign in to Flotilla — browser extension, mobile signer, remote bunker, email, or a raw key — and which is safest."
 order: 6
 category: basics

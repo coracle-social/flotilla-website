@@ -1,5 +1,7 @@
 ---
 title: "Enabling Voice and Video Calls on Your Relay (LiveKit)"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Operator-side setup for voice rooms and video calls: running LiveKit and wiring it into zooid."
 order: 30
 category: advanced

@@ -1,5 +1,7 @@
 ---
 title: "What is Flotilla?"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: what-is-flotilla
 source: https://flotilla.social/articles/what-is-flotilla
 description: "Flotilla is a platform for building online communities you actually own — an alternative to Discord that nobody can take away from you."

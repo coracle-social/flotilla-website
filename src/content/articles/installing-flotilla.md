@@ -1,5 +1,7 @@
 ---
 title: "Installing Flotilla on Web and Mobile"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "How to run Flotilla in a browser, install it as a PWA, or get the native Android and iOS apps."
 order: 8
 category: basics

@@ -1,5 +1,7 @@
 ---
 title: "Privacy Settings: Limiting What You Leak"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Walk through Flotilla's privacy controls: relay auto-authentication, error/usage reporting opt-out, your media server choice, and why link previews and remote media can expose your IP."
 order: 20
 category: basics

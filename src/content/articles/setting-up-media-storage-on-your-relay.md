@@ -1,5 +1,7 @@
 ---
 title: "Setting Up Media Storage on Your Relay (Blossom)"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Turn on Blossom media storage for a self-hosted zooid relay, choose local or S3 storage, and avoid the default that makes uploaded files world-readable."
 order: 29
 category: advanced

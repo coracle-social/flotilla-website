@@ -1,5 +1,7 @@
 ---
 title: "Backing Up and Upgrading Your Self-Hosted Relay"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "What to back up on a self-hosted zooid relay, how to do it safely, and how to upgrade without losing data."
 order: 31
 category: advanced

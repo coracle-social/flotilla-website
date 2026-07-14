@@ -1,5 +1,7 @@
 ---
 title: "Spaces and Rooms Explained"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "The mental model behind Flotilla: a Space is a community hosted on a relay, and Rooms are the channels inside it."
 order: 10
 category: basics

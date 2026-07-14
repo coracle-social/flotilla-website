@@ -1,5 +1,7 @@
 ---
 title: "Direct Messages"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Starting encrypted one-on-one and group conversations outside of any space."
 order: 13
 category: basics

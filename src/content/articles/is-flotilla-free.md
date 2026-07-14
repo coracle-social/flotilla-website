@@ -1,5 +1,7 @@
 ---
 title: "Is Flotilla Free?"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Using Flotilla and joining communities is completely free; the only optional costs are hosting your own space or sending zaps, and this spells out the client-vs-hosting distinction."
 order: 3
 category: basics

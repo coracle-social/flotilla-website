@@ -1,5 +1,7 @@
 ---
 title: "Featured Content and the Library"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Highlight key content on your space's About page and curate collections of links and events in the Library."
 order: 34
 category: advanced

@@ -1,5 +1,7 @@
 ---
 title: "Zaps and Your Wallet"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Send Lightning tips on messages, events, and community goals, and connect a wallet to Flotilla."
 order: 18
 category: basics

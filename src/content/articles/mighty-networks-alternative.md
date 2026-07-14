@@ -1,5 +1,7 @@
 ---
 title: "Flotilla: An Open Alternative to Mighty Networks"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: mighty-networks-alternative
 description: "Looking for an alternative to Mighty Networks? Flotilla is an open, ownable community platform you can self-host or host cheaply, with no ads or lock-in."
 order: 43

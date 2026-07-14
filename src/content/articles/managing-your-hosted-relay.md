@@ -1,5 +1,7 @@
 ---
 title: "Managing Your Hosted Relay in the Coracle Panel"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Day-to-day operation of a hosted space: plans, feature toggles, access policy, and deactivation."
 order: 25
 category: advanced

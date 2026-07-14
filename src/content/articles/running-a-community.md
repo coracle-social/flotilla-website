@@ -1,5 +1,7 @@
 ---
 title: "Running a Community"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: running-a-community
 source: https://flotilla.social/articles/running-a-community
 description: "Practical guidance on purpose, moderation, and culture for people responsible for a community."

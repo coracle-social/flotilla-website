@@ -1,5 +1,7 @@
 ---
 title: "Finding Messages and Recent Activity"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Use a space's Recent Activity feed to catch up and the Search Content dialog to find old messages, and understand why search results depend on the space's own relay."
 order: 15
 category: basics

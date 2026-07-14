@@ -1,5 +1,7 @@
 ---
 title: "Using Voice and Video Calls"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "How to join and take part in a space's voice rooms and video calls: previewing participants, picking your mic, muting, screen sharing, and pinning a video tile."
 order: 14
 category: basics

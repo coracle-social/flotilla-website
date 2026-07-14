@@ -1,5 +1,7 @@
 ---
 title: "Notifications and Muting"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Control what pings you: per-room and per-space notifications, alert types, and muting accounts or rooms."
 order: 16
 category: basics

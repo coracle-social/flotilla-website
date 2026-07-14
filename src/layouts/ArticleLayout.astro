@@ -7,6 +7,9 @@ interface Props {
   description?: string;
   cluster?: string | null;
   readTime?: number;
+  author: string;
+  pubDate?: Date;
+  updatedDate?: Date;
   prev?: { slug: string; title: string } | null;
   next?: { slug: string; title: string } | null;
   ogImage?: string;
@@ -17,13 +20,57 @@ const {
   description,
   cluster,
   readTime,
+  author,
+  pubDate,
+  updatedDate,
   prev = null,
   next = null,
-  ogImage,
+  ogImage = '/og-image.png',
 } = Astro.props;
+
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const imageAbsolute = new URL(ogImage, site).href;
+
+const dateFmt = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  // Dates are stored as UTC midnight; format in UTC so the displayed day
+  // matches the stored date regardless of the build machine's timezone.
+  timeZone: 'UTC',
+});
+const displayDate = pubDate ? dateFmt.format(pubDate) : null;
+
+// Article structured data — the machine-readable "who / when / by whom" that
+// helps Search understand authorship and freshness.
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  ...(description ? { description } : {}),
+  image: imageAbsolute,
+  author: { '@type': 'Person', name: author },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Flotilla',
+    logo: { '@type': 'ImageObject', url: new URL('/logo.png', site).href },
+  },
+  ...(pubDate ? { datePublished: pubDate.toISOString() } : {}),
+  ...(pubDate || updatedDate
+    ? { dateModified: (updatedDate ?? pubDate)!.toISOString() }
+    : {}),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+};
 ---
 
-<BaseLayout title={title} description={description} ogImage={ogImage}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  ogType="article"
+  jsonLd={jsonLd}
+>
   <Container size="narrow" class="py-12 md:py-20">
     <header class="mb-10 md:mb-14">
       <a
@@ -36,20 +83,29 @@ const {
       <h1 class="mt-5 text-4xl md:text-5xl font-black text-text leading-[1.1]">
         {title}
       </h1>
-      {(cluster || readTime) && (
-        <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-text-dim">
-          {cluster && (
-            <span class="inline-flex items-center rounded-pill border border-border bg-surface px-3 py-1 font-mono text-xs uppercase tracking-[0.15em] text-text-muted">
-              {cluster}
-            </span>
-          )}
-          {readTime && (
-            <span class="font-mono text-xs uppercase tracking-[0.15em]">
-              {readTime} min read
-            </span>
-          )}
-        </div>
-      )}
+      <div class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-text-dim">
+        {cluster && (
+          <span class="inline-flex items-center rounded-pill border border-border bg-surface px-3 py-1 font-mono text-xs uppercase tracking-[0.15em] text-text-muted">
+            {cluster}
+          </span>
+        )}
+        <span class="font-mono text-xs uppercase tracking-[0.15em]">
+          By {author}
+        </span>
+        {displayDate && (
+          <time
+            datetime={pubDate!.toISOString()}
+            class="font-mono text-xs uppercase tracking-[0.15em]"
+          >
+            {displayDate}
+          </time>
+        )}
+        {readTime && (
+          <span class="font-mono text-xs uppercase tracking-[0.15em]">
+            {readTime} min read
+          </span>
+        )}
+      </div>
       {description && (
         <p class="mt-6 text-lg text-text-muted leading-relaxed">{description}</p>
       )}

@@ -1,5 +1,7 @@
 ---
 title: "Flotilla: A Discord Alternative You Actually Own"
+author: "Jon Staab"
+pubDate: 2026-07-14
 slug: discord-alternative
 description: "An honest look at Flotilla as an alternative to Discord: own your community, self-host, avoid deplatforming, and run without ads."
 order: 41

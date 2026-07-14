@@ -1,5 +1,7 @@
 ---
 title: "Setting Up Your Profile"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "Edit your display name, avatar, bio, and website, add an optional Nostr address (NIP-05), and share your profile QR code so others can find you and start a DM."
 order: 9
 category: basics

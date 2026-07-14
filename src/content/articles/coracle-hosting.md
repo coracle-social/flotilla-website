@@ -1,5 +1,7 @@
 ---
 title: "Hosting Your Space with Coracle"
+author: "Jon Staab"
+pubDate: 2026-07-14
 description: "What Coracle Hosting is, how it differs from Flotilla itself, and what each plan includes."
 order: 24
 category: advanced
