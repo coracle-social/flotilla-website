@@ -44,6 +44,17 @@ export const CLUSTERS: Cluster[] = [
     ],
   },
   {
+    id: 'comparisons',
+    title: 'Comparisons',
+    pillar: COMMUNITY,
+    slugs: [
+      'slack-alternative',
+      'discord-alternative',
+      'telegram-alternative',
+      'mighty-networks-alternative',
+    ],
+  },
+  {
     id: 'nostr',
     title: 'Understanding Nostr',
     pillar: NOSTR,
