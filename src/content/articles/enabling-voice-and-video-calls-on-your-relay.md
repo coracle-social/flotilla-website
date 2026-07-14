@@ -48,7 +48,7 @@ Configuring `[livekit]` makes calling available to the relay, but it doesn't tur
 
 ## If your space is hosted, not self-hosted
 
-If your space runs on [Coracle Hosting](/articles/coracle-hosting) rather than a relay you manage yourself, you don't touch any of the above directly. Video calling is one of the relay feature toggles on your relay's page in the hosting panel (see [Managing Your Hosted Relay](/articles/managing-your-hosted-relay)), and it's only available on paid plans — the Basic and Growth plans include it, and the Free plan does not. Coracle runs and configures the LiveKit server for you, so flipping the toggle is the entire setup.
+If your space runs on [Coracle Hosting](/articles/coracle-hosting) rather than a relay you manage yourself, you don't touch any of the above directly. Video calling is one of the relay feature toggles in the hosting panel, and it's only available on paid plans — the Basic and Growth plans include it, and the Free plan does not. Coracle runs and configures the LiveKit server for you, so flipping the toggle is the entire setup.
 
 ## Verifying it works
 

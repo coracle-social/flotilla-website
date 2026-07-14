@@ -33,7 +33,7 @@ Money enters the picture in just one place: when *you* want to run your own spac
 
 If you do want to host a space, you have two paths, and only one is a Coracle product:
 
-- **Coracle Hosting** — a managed control panel where you provision and pay for a relay. It has a free tier for small communities, plus paid plans as you add members or want features like media storage and voice/video. Coracle Hosting and Flotilla are two different products: Flotilla is where members chat, Coracle Hosting is where an owner provisions and pays for the relay behind it. See [Hosting Your Space with Coracle](/articles/coracle-hosting) for exact plan pricing and what each tier includes.
+- **Coracle Hosting** — a managed option where you provision and pay for a relay, with a free tier for small communities and paid plans as you add members or want media and voice/video. See [Hosting Your Space with Coracle](/articles/coracle-hosting) for plan pricing and what each tier includes.
 - **Self-hosting** — the underlying relay software (zooid) is itself free and open source; you just pay for your own server to run it on. See [Self Hosting a Space](/articles/self-hosting-a-space) for a full walkthrough.
 
 Either way, this cost belongs to whoever owns and runs the space, not to the people who join and chat in it. As a member, you never pay just because the space you joined happens to run on a paid plan somewhere.

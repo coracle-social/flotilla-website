@@ -30,7 +30,7 @@ That's it. From then on you can sign in on any device with your email and passwo
 
 ## Generate your own key
 
-This path gives you full control from the start. Instead of an account a company issues and can revoke, you get a **key** that belongs to you: a *public* half that acts as your ID, and a *private* half that works like a master password. Because you hold it, no one can lock you out or take your identity away.
+This path gives you full control from the start: instead of an account a company issues and can revoke, you get a **key** that belongs to you, so no one can lock you out or take your identity away. (See [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity) for what that key actually is.)
 
 1. On the "Join Flotilla" screen, choose **Generate a key**. Flotilla creates a new key and stores it in your browser.
 2. Fill out your **profile** — a name, a picture, a short bio, all optional — then continue.
@@ -44,4 +44,4 @@ If you've used Flotilla or another Nostr app before, choose **Log in** on the we
 
 ## You're in
 
-However you signed up, you'll land on your dashboard, ready to connect with your community — [join a space](/articles/joining-a-space) someone has invited you to, or [start one of your own](/articles/creating-a-space).
+However you signed up, you'll land on your dashboard, ready to connect with your community — [join a space](/articles/joining-a-space) someone has invited you to, or [start one of your own](/articles/coracle-hosting).

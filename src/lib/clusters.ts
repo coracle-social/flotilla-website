@@ -61,7 +61,6 @@ export const CLUSTERS: Cluster[] = [
     slugs: [
       'nostr-terms-explained',
       'understanding-your-nostr-identity',
-      'backing-up-and-recovering-your-account',
     ],
   },
   {
@@ -84,7 +83,7 @@ export const CLUSTERS: Cluster[] = [
     id: 'running',
     title: 'Running a community',
     pillar: COMMUNITY,
-    slugs: ['running-a-community', 'creating-a-space', 'managing-a-space', 'controlling-space-access'],
+    slugs: ['running-a-community', 'managing-a-space', 'controlling-space-access'],
   },
   {
     id: 'hosting',
@@ -93,7 +92,6 @@ export const CLUSTERS: Cluster[] = [
     slugs: [
       'coracle-hosting',
       'platform-plan',
-      'managing-your-hosted-relay',
       'hosting-billing',
       'custom-domain',
       'self-hosting-a-space',

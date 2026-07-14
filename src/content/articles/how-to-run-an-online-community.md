@@ -41,7 +41,6 @@ You have two ways to get a space, and the difference comes down to who keeps tha
 **Learn more:**
 - [What is Flotilla?](/articles/what-is-flotilla)
 - [Getting Started](/articles/getting-started)
-- [Creating a Space](/articles/creating-a-space)
 
 ---
 
@@ -74,7 +73,6 @@ Either way, you can give your community its own web address. A managed space com
 
 **Learn more:**
 - [Hosting Your Space with Coracle](/articles/coracle-hosting)
-- [Managing Your Hosted Space](/articles/managing-your-hosted-relay)
 - [Billing and Payments for Your Hosted Space](/articles/hosting-billing)
 - [Using a Custom Domain](/articles/custom-domain)
 - [Self-Hosting a Space](/articles/self-hosting-a-space)

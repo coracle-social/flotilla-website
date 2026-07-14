@@ -74,4 +74,4 @@ With the local adapter, uploaded files live in your relay's media volume alongsi
 
 ## If your space is hosted, not self-hosted
 
-None of the above applies if your space runs on [Coracle Hosting](/articles/coracle-hosting) rather than a relay you manage yourself. There, media storage is one of the relay feature toggles on your space's page in the hosting dashboard — available on the Basic and Growth plans, but not on Free. You don't get to touch `authenticated_read` or choose an S3 backend yourself; Coracle Hosting handles storage behind the toggle. See [Managing Your Hosted Relay](/articles/managing-your-hosted-relay) for where that switch lives.
+None of the above applies if your space runs on [Coracle Hosting](/articles/coracle-hosting) rather than a relay you manage yourself. There, media storage is one of the relay feature toggles on your space's page in the hosting dashboard — available on the Basic and Growth plans, but not on Free. You don't get to touch `authenticated_read` or choose an S3 backend yourself; Coracle Hosting handles storage behind the toggle.

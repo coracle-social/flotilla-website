@@ -2,7 +2,7 @@
 title: "Hosting Your Space with Coracle"
 author: "Jon Staab"
 pubDate: 2026-07-14
-description: "What Coracle Hosting is, how it differs from Flotilla itself, and what each plan includes."
+description: "Your Flotilla community lives on a relay you control — hosted for you or self-run. What that means, the plan options, and what you manage where."
 order: 24
 category: advanced
 ---
@@ -11,29 +11,29 @@ category: advanced
 
 *Part of our guide to [running an online community you actually own](/articles/how-to-run-an-online-community).*
 
-Setting up a community means working in two places: Flotilla, where your members actually chat, and Coracle Hosting, where you create and pay for the relay that Flotilla connects to. They look and feel completely different, and that's deliberate — they're separate products doing separate jobs. Mixing them up is the easiest way to get confused while setting up a space.
+Flotilla is the app your community uses; it doesn't host the community itself. Your space lives on a Nostr relay, and that relay has to run somewhere. This article covers what that means and how to get a relay — with a hosting provider or by running one yourself.
 
-## Two products, not one
+## Flotilla is the app; your space is a relay
 
-Flotilla is a client app. It has no servers of its own and hosts no one's community — it's the software you and your members use to read and post messages. [Spaces and rooms](/articles/spaces-and-rooms-explained) live on a Nostr relay, and that relay has to run somewhere.
+Flotilla is a client app — the software you and your members use to read and post messages. It has no servers of its own and hosts no one's community. [Spaces and rooms](/articles/spaces-and-rooms-explained) live on a relay, and that relay is what actually needs hosting.
 
-Coracle Hosting is that somewhere. It's a separate control panel — a different site entirely — where you provision a relay, configure it, and pay a monthly bill. There's no chat, no rooms, no message feed. Its whole job is relay infrastructure and billing. Once your relay is live, you head back to Flotilla (or another Nostr client, like Chachi or Nostrord) to run your community day to day. Coracle Hosting isn't where members show up.
+So setting up a community means two things exist side by side: Flotilla, where members chat, and the relay, which runs on infrastructure you choose. Keeping that split in mind is the easiest way to avoid confusion while you get set up — a lot of "where is this setting?" questions come down to looking in the app when the answer lives with the relay, or vice versa.
 
-In short: Coracle Hosting is where you buy and manage the relay; Flotilla is where you use it. Expect to visit both.
+## Two ways to get a relay
 
-## Signing in
+You have two paths, and the difference comes down to who keeps the server running:
 
-Coracle Hosting has no email/password accounts. You sign in the way you do everywhere else on Nostr — with your key. You can:
+- **Hosted** — a provider runs the relay for you. In Flotilla, click **Add a Space**, then **Create a Space**, to browse the available providers. Flotilla's parent company, Coracle, offers a managed option that's a simple place to start, but it isn't the only one — it's worth clicking through a few to find the right fit for your community.
 
-- Log in with a browser extension (NIP-07)
-- Log in with a remote signer / bunker (Nostr Connect)
-- Import an existing `nsec` or password-protected `ncryptsec` directly
+  ![](/images/YpWKXWBpYZjOTmWOwNg6gtgQlA.png)
 
-There's no password reset. The key you used to create your hosting account is the only way back in. Lose it, and you lose access to the dashboard that manages your relay, your billing, and your custom domain settings. If any of that is new to you, read [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity), and back up that key before you rely on a hosted space.
+- **Self-hosted** — run the server yourself for the most control. There are dozens of Nostr relay implementations; we recommend [Zooid by Coracle](https://github.com/coracle-social/zooid), built specifically to work with Flotilla, or [Pyramid](https://nostrapps.com/pyramid), which brings its own dashboard and relay policies. See [Self Hosting a Space](/articles/self-hosting-a-space) for a step-by-step walkthrough.
 
-## Getting a space
+The rest of this article covers the managed path with Coracle Hosting.
 
-Setting up a hosted relay takes a few steps: pick a name and a subdomain (something like `myspace.spaces.coracle.social`), choose a plan, and log in with your Nostr key. Your relay and your hosting account are created together in that same flow. If you picked a paid plan, you'll be prompted to set up payment right away.
+## Signing in to Coracle Hosting
+
+Coracle Hosting is a separate control panel — a different site from Flotilla, with its own login. There are no email-and-password accounts; you sign in with your Nostr key, the same way you do across Nostr (a browser extension, a remote signer or bunker, or by importing an `nsec` or `ncryptsec`). As everywhere on Nostr, there's no password reset, so [back up that key](/articles/understanding-your-nostr-identity) before you rely on a hosted space.
 
 ## Plans
 
@@ -45,12 +45,15 @@ Coracle Hosting offers three self-service plans, priced by member cap and featur
 | Basic | $5/mo | 100 | Included |
 | Growth | $25/mo | Unlimited | Included |
 
-Rooms, the management API, and push notifications come with every plan, including Free. Media storage and voice/video calls turn on only once you're on Basic or Growth.
+Rooms, the management API, and push notifications come with every plan, including Free. Media storage and voice/video calls turn on only once you're on Basic or Growth. There's also a Custom plan for larger communities — a white-labeled app, dedicated support, and custom development — arranged by booking a call rather than signing up directly.
 
-There's also a Custom plan for larger communities — a white-labeled app, dedicated support, and custom development. Unlike the other three, it isn't self-service; you book a call to work out pricing and scope directly.
+## Managing your relay
 
-## After your relay is live
+Once your relay is live, you run it from the Coracle hosting panel: switch plans, set the relay's access policy, connect a [custom domain](/articles/custom-domain), and handle [billing](/articles/hosting-billing). You can host more than one space under the same account, and deactivating a relay pauses it (and its billing) without losing any of your data. The panel is Coracle's own product, and its documentation covers the day-to-day details.
 
-Once your space is provisioned, the two products divide the work cleanly. Coracle Hosting is where you change plans, set your relay's access policy, add a custom domain, and handle billing — see [Managing Your Hosted Relay](/articles/managing-your-hosted-relay), [Billing and Payments](/articles/hosting-billing), and [Using a Custom Domain](/articles/custom-domain) for those. Everything a member actually experiences — joining, chatting, roles, bans, moderation — happens back in Flotilla, not in the hosting panel. If you'd rather run the relay yourself instead of paying for hosting, see [Self Hosting a Space](/articles/self-hosting-a-space).
+Two things are worth knowing up front, because they're where Flotilla and the hosting panel divide the work:
 
-If you're still deciding whether to host at all versus join an existing community, start with [Creating a Space](/articles/creating-a-space).
+- **Member moderation happens in Flotilla, not the hosting panel.** Adding members, banning and restoring them, and reviewing reports are all done in the app, against the relay itself — see [Managing a Space](/articles/managing-a-space). The hosting panel only shows a read-only member count.
+- **How open your space is** — who can read, post, or join — is the relay's access policy. It's set on the hosting side, but the decision is a community one; see [Controlling Who Can Join Your Space](/articles/controlling-space-access).
+
+If paying for hosting isn't for you, [Self Hosting a Space](/articles/self-hosting-a-space) covers running the relay on your own server instead.

@@ -41,6 +41,6 @@ Voice and video calls only work on a relay that's been set up to support them. I
 
 ## Who Turns This On
 
-Enabling calls is the Space owner's job, not something a member configures. If they self-host their relay, the steps are in [Enabling Voice and Video Calls on Your Relay](/articles/enabling-voice-and-video-calls-on-your-relay). If their Space is on Coracle Hosting, video calling is a plan-gated toggle in the hosting dashboard — see [Managing Your Hosted Relay](/articles/managing-your-hosted-relay) for where it lives. Either way, if you think a Space should have voice but doesn't, that's a conversation to have with whoever runs it.
+Enabling calls is the Space owner's job, not something a member configures. If they self-host their relay, the steps are in [Enabling Voice and Video Calls on Your Relay](/articles/enabling-voice-and-video-calls-on-your-relay). If their Space is on [Coracle Hosting](/articles/coracle-hosting), video calling is a plan-gated toggle the owner enables in the hosting dashboard. Either way, if you think a Space should have voice but doesn't, that's a conversation to have with whoever runs it.
 
 If you get stuck, [reach out to the community](/articles/community-and-support) for help.

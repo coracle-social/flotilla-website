@@ -2,7 +2,7 @@
 title: "Understanding Your Nostr Identity"
 author: "Jon Staab"
 pubDate: 2026-07-14
-description: "What a Nostr key actually is, why it means you own your identity instead of renting an account, and how to keep it safe."
+description: "What a Nostr key actually is, why it means you own your identity instead of renting an account, how to back it up, and how to get back in on a new device."
 order: 4
 category: basics
 ---
@@ -11,7 +11,7 @@ category: basics
 
 *Part of our guide to [understanding Nostr](/articles/what-is-nostr).*
 
-If you signed up for Flotilla using [Getting Started](/articles/getting-started), you already have a Nostr key. This article explains what that means, because it's the biggest difference between Flotilla and a normal app — and the one thing you can't afford to get wrong.
+If you signed up for Flotilla using [Getting Started](/articles/getting-started), you already have a Nostr key. This article explains what that means — it's the biggest difference between Flotilla and a normal app, and the one thing you can't afford to get wrong — and then covers the practical side: backing your key up and getting back into your account later.
 
 ## An identity you own, not an account you rent
 
@@ -39,13 +39,25 @@ There's no "forgot password" link for a Nostr key, so backing it up properly mat
 
 Either way, store the download somewhere durable and private, like a password manager, rather than leaving it in a downloads folder or sending it to yourself over chat.
 
-## No password reset
-
 This is the tradeoff for owning your identity outright: no support team can reset it for you. Lose your key — the device it lived on breaks, or you never backed it up — and you lose that identity for good, along with every space, follow, and message tied to it. If someone else gets your nsec, they can act as you until you notice and switch to a new key. Take the backup step seriously the first time, because there usually isn't a second chance.
+
+## Getting back in on a new device
+
+Your key doesn't sync between devices the way a browser bookmark might. To sign in somewhere new, either bring your backed-up key with you or use the extension, mobile signer, or bunker you already have set up elsewhere — see [Ways to Log In to Flotilla](/articles/logging-in-to-flotilla) for how each one works.
+
+A new device isn't a blank slate, though. Your spaces, rooms, and messages live on the relays that host them, not on any one device, so they're there the moment you sign in. Flotilla also syncs some read state across devices — like which messages you've already seen. It's only the *key itself* that Flotilla won't hand you automatically; everything built on top of it is waiting once you sign back in.
+
+## Finding your key again in Settings
+
+If you signed up by generating or pasting a raw key, Settings > Profile shows a masked **Private Key** field with a copy button, so you can grab your nsec again without digging up your original backup. It's copy-only — there's no re-download button — so paste it straight into a password manager rather than leaving it on your clipboard.
+
+That field only appears if Flotilla actually holds your raw key. If you log in with a browser extension, a mobile signer, a remote bunker, or an email account, your key never touches Flotilla at all, so there's nothing to show — those methods do their signing on their own side of the connection.
 
 ## An easier on-ramp: email login
 
-If managing a raw key doesn't feel right yet, Flotilla also lets you sign up with just an email address, through a service called Pomade. Under the hood you still get a Nostr identity, but your key is split across multiple servers for social recovery rather than resting entirely on a file only you hold — a more familiar safety net while you get comfortable with how Nostr keys work. You can read more about the tradeoffs of each login method in [Ways to Log In to Flotilla](/articles/logging-in-to-flotilla).
+If managing a raw key doesn't feel right yet, Flotilla also lets you sign up with just an email address, through a service called Pomade. Under the hood you still get a Nostr identity, but your key is split across multiple servers for social recovery rather than resting entirely on a file only you hold — a more familiar safety net while you get comfortable with how Nostr keys work.
+
+Email accounts also recover differently. Because no single party holds the whole key, there's no file to lose: instead, Settings > Profile offers an **Update your password** option and a **Start holding your own keys** option that moves you to a self-custodied key when you're ready. That move is a recovery flow rather than a straight download — it reassembles your key from its pieces, emails you confirmation codes, and has you paste them back to confirm before it completes, so a stolen password alone can't pull your key out. The same screen lists your active device sessions and lets you end any you don't recognize. You can read more about the tradeoffs of each login method in [Ways to Log In to Flotilla](/articles/logging-in-to-flotilla).
 
 ## Your profile isn't your key
 

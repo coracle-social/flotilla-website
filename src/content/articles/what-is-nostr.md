@@ -33,7 +33,6 @@ The catch is the flip side of owning something outright: there's no "forgot pass
 
 **Learn more:**
 - [Understanding Your Nostr Identity](/articles/understanding-your-nostr-identity)
-- [Backing Up and Recovering Your Account](/articles/backing-up-and-recovering-your-account)
 
 ## How communities and apps work on it
 
