@@ -81,6 +81,7 @@ export const CLUSTERS: Cluster[] = [
     pillar: COMMUNITY,
     slugs: [
       'coracle-hosting',
+      'platform-plan',
       'managing-your-hosted-relay',
       'hosting-billing',
       'custom-domain',

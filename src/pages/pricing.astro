@@ -21,6 +21,7 @@ const tiers = [
       'Member directory & activity feed',
     ],
     cta: { label: 'Start free', href: CREATE_URL, variant: 'secondary' },
+    learnMore: null,
     featured: false,
   },
   {
@@ -37,6 +38,7 @@ const tiers = [
       'Your own custom domain',
     ],
     cta: { label: 'Start a community', href: CREATE_URL, variant: 'primary' },
+    learnMore: null,
     featured: true,
   },
   {
@@ -53,6 +55,7 @@ const tiers = [
       'Priority support',
     ],
     cta: { label: 'Book a demo', href: DEMO_URL, variant: 'secondary' },
+    learnMore: '/articles/platform-plan',
     featured: false,
   },
 ] as const;
@@ -111,6 +114,15 @@ const tiers = [
               <Button href={tier.cta.href} variant={tier.cta.variant} class="w-full">
                 {tier.cta.label}
               </Button>
+              {tier.learnMore && (
+                <a
+                  href={tier.learnMore}
+                  class="group mt-3 flex items-center justify-center gap-1 text-sm font-bold text-text-muted hover:text-primary-soft transition-colors"
+                >
+                  Learn more
+                  <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </a>
+              )}
             </div>
           </div>
         ))}
