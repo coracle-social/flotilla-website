@@ -71,7 +71,7 @@ The fastest way to understand Nostr is to use something built on it. Flotilla is
 
 When you arrive, you can either log in or sign up. If you already have a Nostr key from another app, log in with that. If you're new, choose sign up and Flotilla will create a key for you, store it in your browser, and then offer you a copy to save somewhere safe — this is the moment to tuck it into that password manager.
 
-Once you have your key, you can explore one of the [hundreds of Nostr applications](https://nostrapps.com/) and log in with the **same identity**!
+Once you have your key, you can explore one of the [hundreds of Nostr applications](https://nostrapps.com/) and log in with the **same identity**! For a shorter, hand-picked list, see the [tools and apps we recommend](/ecosystem).
 
 If keys sound like more than you want to deal with today, you don't have to touch them. Flotilla also offers "Log in with Email," which works the way you'd expect: an email address and a password, or a one-time code sent to your inbox if you forget it. There's still a real Nostr identity behind the scenes — you're just not the one holding the key file, and you can switch to holding it yourself later.
 
